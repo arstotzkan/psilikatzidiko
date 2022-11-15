@@ -271,9 +271,7 @@ strong {
 }
 
 #main-container, #main-content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+
 	color: #6f0b9d;
 }
 
