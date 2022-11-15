@@ -55,14 +55,14 @@ article > p {
 
 article > header {
   /*Specifies the width of a header in an article*/
-  font: 1rem Proza ;  
+  font: 1rem;  
   width: 28rem;
   height: auto;
 }
 
 section > header {
   /*Header's font and text alignment*/
-  font: 1.4rem Proza ;  
+  font: 1.4rem;  
   text-align: center;
 }
 
@@ -299,7 +299,7 @@ strong {
 
 #basic-info {
   /*Text style,live space from the left and auto hight for basic info*/
-	font: 1.2rem Proza ;
+	font: 1.2rem ;
 	text-align: left;
 	padding-left: 2rem;
   height: auto;
