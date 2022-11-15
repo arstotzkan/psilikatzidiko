@@ -56,14 +56,15 @@ article > p {
 article > header {
   /*Specifies the width of a header in an article*/
   font: 1rem;  
-  width: 28rem;
   height: auto;
+  width: 100%;
 }
 
 section > header {
   /*Header's font and text alignment*/
   font: 1.4rem;  
   text-align: center;
+  width: 100%;
 }
 
 h1,h2,h3,h4 {
