@@ -55,14 +55,14 @@ article > p {
 
 article > header {
   /*Specifies the width of a header in an article*/
-  font: 1rem;  
+  font-size: 1rem;
   height: auto;
   width: 100%;
 }
 
 section > header {
   /*Header's font and text alignment*/
-  font: 1.4rem;  
+  font-size: 1.4rem;
   text-align: center;
   width: 100%;
 }
@@ -160,6 +160,13 @@ strong {
   /*Size of list and live space around*/
   width: 12rem;
   margin: 0.5rem;
+}
+
+.reviews {
+	border: 0.2rem solid #99129b;
+	border-radius: 0.4rem;
+	padding: 0.5rem;
+	margin: 0.3rem;
 }
 
 .category-list {
@@ -300,7 +307,7 @@ strong {
 
 #basic-info {
   /*Text style,live space from the left and auto hight for basic info*/
-	font: 1.2rem ;
+	font-size: 1.2rem ;
 	text-align: left;
 	padding-left: 2rem;
   height: auto;
@@ -374,9 +381,7 @@ strong {
 	list-style-type: none;
 	display: block;
 	padding: 0rem;
-	margin: 0rem;
-	margin-bottom: 0.5rem;
-	margin-top: 0.5rem;
+	margin: 0.5rem 0rem 0.5rem 0rem;
 	text-align: left;
 }
 
