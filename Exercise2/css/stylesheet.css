@@ -93,18 +93,17 @@ table {
 
 th, td {
 	/*Border and width for th and td*/
-	border: 1px ridge white;
+	border: 1px ridge #6f0b9d;
 	width: 12rem;
 }
 
 form {
 	/*Text color and alignment. Border, width and space around inside form. Space left outside the form*/
-	color: #ffffff;
 	text-align: left;
-	border: 2px solid #ffffff;
+	border: 2px solid #6f0b9d;
 	width: 30rem;
 	padding: 1rem;
-  margin-top: 2rem;
+	margin: 2rem 1rem 1rem 1rem;
 }
 
 fieldset {
@@ -306,7 +305,7 @@ strong {
 }
 
 #basic-info {
-  /*Text style,live space from the left and auto hight for basic info*/
+  /*Text style,live space from the left and auto height for basic info*/
 	font-size: 1.2rem ;
 	text-align: left;
 	padding-left: 2rem;
@@ -321,6 +320,10 @@ strong {
 #basic-info a {
   /*Link color for basic info*/
   color: #ffc400;
+}
+
+#product-nav {
+	margin-left: 2.5rem;
 }
 
 #product-description p {
@@ -358,9 +361,9 @@ strong {
   padding-left: 0.8rem;
 }
 
-#tech-support-img {
+.tech-support-img {
   /*Width of tech support image, space around and extra space from top*/
-  width: 20rem;
+  width: 15rem;
   padding: 2rem;
   margin-top: 5rem;
 }
@@ -452,7 +455,7 @@ strong {
 }
 
 #opening-hours {
-  /*Possition and space around for opening hours*/
+  /*Position and space around for opening hours*/
   float: right;
   margin-right: 2rem;
 }
