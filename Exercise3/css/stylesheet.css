@@ -183,6 +183,7 @@ aside {
 .product-header-text{
 	/*Elements have blank space from top*/
 	padding-top: 2rem;
+	margin: 0 5%;
 }
 
 .product-list {
@@ -435,6 +436,11 @@ aside {
 .sidebar-link{
 	display: flex;
 	align-items: center;
+}
+
+.item {
+	display:flex; 
+	justify-content: center;
 }
 
 #sidebar li:hover{
