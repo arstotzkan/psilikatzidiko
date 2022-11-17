@@ -11,6 +11,8 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 header{
@@ -30,9 +32,13 @@ footer {
 	/*Align text in center and live some space from main content*/
 	text-align: center;
 	margin-top: 2rem;
-	height: 5%;
+	/*height: 5%;*/
 	position: relative;
 	z-index: 10;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 footer a,
@@ -93,18 +99,17 @@ table {
 
 th, td {
 	/*Border and width for th and td*/
-	border: 1px ridge white;
+	border: 1px ridge #6f0b9d;
 	width: 12rem;
 }
 
 form {
 	/*Text color and alignment. Border, width and space around inside form. Space left outside the form*/
-	color: #ffffff;
 	text-align: left;
-	border: 2px solid #ffffff;
+	border: 2px solid #6f0b9d;
 	width: 30rem;
 	padding: 1rem;
-  margin-top: 2rem;
+    margin: 2rem 1rem 1rem 1rem;
 }
 
 fieldset {
@@ -132,6 +137,30 @@ input {
 strong {
   /*Strong text is slightly bigger*/
   font-size: 1.1rem;
+}
+
+main {
+	/*Grid position for main content*/
+	grid-row-start: 2;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+header:first-of-type {
+	/*Grid position for top header of the page*/
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+aside {
+	/*Grid position for secondary menu*/
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
 }
 
 .left {
@@ -274,7 +303,7 @@ strong {
 }
 
 #main-container{
-	margin-left: 20%;
+	/*margin-left: 20%;*/
 	display: block;
 }
 
@@ -306,7 +335,7 @@ strong {
 }
 
 #basic-info {
-  /*Text style,live space from the left and auto hight for basic info*/
+  /*Text style,live space from the left and auto height for basic info*/
 	font-size: 1.2rem ;
 	text-align: left;
 	padding-left: 2rem;
@@ -321,6 +350,10 @@ strong {
 #basic-info a {
   /*Link color for basic info*/
   color: #ffc400;
+}
+
+#product-nav {
+	margin-left: 2.5rem;
 }
 
 #product-description p {
@@ -358,9 +391,9 @@ strong {
   padding-left: 0.8rem;
 }
 
-#tech-support-img {
+.tech-support-img {
   /*Width of tech support image, space around and extra space from top*/
-  width: 20rem;
+  width: 15rem;
   padding: 2rem;
   margin-top: 5rem;
 }
@@ -452,7 +485,7 @@ strong {
 }
 
 #opening-hours {
-  /*Possition and space around for opening hours*/
+  /*Position and space around for opening hours*/
   float: right;
   margin-right: 2rem;
 }
