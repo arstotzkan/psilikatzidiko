@@ -1,9 +1,13 @@
-/*Se kathe kanona thelei na grafoume sxetiko sxolio*/
+@font-face {
+	font-family: myFont;
+	src: local("Tahoma"), url("../fonts/Tahoma.ttf") format("truetype"),
+		 local("Helvetica"), url("../fonts/Helvetica.ttf") format("truetype");
+}
 
 body {
   /*Background color is a gradient of three colors and fixed so it doesn't repeat.
     Text color is white. Sets text fonts and specifies line height.*/
-  font-family: 'Tahoma', 'Helvetica', sans-serif;
+	font-family: myFont, sans-serif;
   background-image: linear-gradient(#6f0b9d, #99129b, #340055);
   background-attachment: fixed;
   color: #ffffff;
@@ -11,6 +15,7 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+  /*Grid layout with 2 columns where the second id 4 times the first*/
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
@@ -35,6 +40,7 @@ footer {
 	/*height: 5%;*/
 	position: relative;
 	z-index: 10;
+	/*Grid position spans all columns and is in the last row*/
 	grid-row-start: 4;
 	grid-row-end: 5;
 	grid-column-start: 1;
@@ -140,7 +146,7 @@ strong {
 }
 
 main {
-	/*Grid position for main content*/
+	/*Grid position second column and is two rows high*/
 	grid-row-start: 2;
 	grid-row-end: 4;
 	grid-column-start: 2;
@@ -148,7 +154,7 @@ main {
 }
 
 header:first-of-type {
-	/*Grid position for top header of the page*/
+	/*Grid position spans all columns and is in the first row*/
 	grid-row-start: 1;
 	grid-row-end: 2;
 	grid-column-start: 1;
@@ -156,7 +162,7 @@ header:first-of-type {
 }
 
 aside {
-	/*Grid position for secondary menu*/
+	/*Grid position first column and is one row high*/
 	grid-row-start: 2;
 	grid-row-end: 3;
 	grid-column-start: 1;
