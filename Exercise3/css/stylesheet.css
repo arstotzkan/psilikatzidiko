@@ -197,14 +197,8 @@ aside {
 
 .product-header-text{
 	/*Elements have blank space from top*/
-	padding-top: 2rem;
+	padding-top: 0.5rem;
 	margin: 0 5%;
-}
-
-.product-list {
-  /*Size of list and live space around*/
-  width: 12rem;
-  margin: 0.5rem;
 }
 
 .reviews {
@@ -335,9 +329,9 @@ aside {
 	font-size: 1rem;
 }
 
-#laptops-list header > img {
+#laptops-list img {
   /*Image width inside in headers for laptop list*/
-	width: 10rem;
+	width: 15rem;
 }
 
 #product-description header {
@@ -372,6 +366,10 @@ aside {
 	margin-left: 2.5rem;
 }
 
+.flex-g-1 {
+	flex-grow: 1;
+}
+
 #product-description p {
   /*Text alignment and space around paragraphs*/
 	padding: 0 0.5rem 0 0.5rem;
@@ -397,8 +395,8 @@ aside {
   width: 25rem;
 }
 
-#phone-list li {
-  /*Height of li for phone list*/
+#phone-list img {
+  /*Height of images for phone list*/
   height: 14rem;
 }
 
@@ -456,6 +454,7 @@ aside {
 .item {
 	display:flex; 
 	justify-content: center;
+	margin: 0.5rem;
 }
 
 #sidebar li:hover{
