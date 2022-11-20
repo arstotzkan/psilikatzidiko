@@ -4,49 +4,40 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>E-Shop</title>
-		<link rel="stylesheet" href="stylesheet.css">
+		<title>Tech Support</title>
 		<link rel="icon" type="image/png" href="images/icons/icon1.png">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-		  rel="stylesheet">
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0..1,-50..200" />
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
 	</head>
 
 	<body>
 		<header>
-			<nav id="top-navbar" class="shadow">
+			<nav id="top-navbar">
 				<span id="shop-name">
-					<a href="index.html" id="main-logo">Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ</a>
+					<a href="../index.html" id="main-logo">Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ</a>
 				</span>
 
 				<input type="text" id="search-bar">
 
 				<div id="top-right-nav">
-					<div class="top-right-item">
+					<div>
 						<a href="product-categories.html" id="categories-link">
 							ΚΑΤΗΓΟΡΙΕΣ
 						</a>
 					</div>
 
-					<div class="top-right-item">
+					<div>
 						<a href="about-us.html" id="bio-link">
 							ΠΟΙΟΙ ΕΙΜΑΣΤΕ
 						</a>
 					</div>
 					
-					<div class="top-right-item">
+					<div>
 						<a href="tech-support.html" id="contract-link">
 							ΜΙΛΗΣΤΕ ΜΑΣ
 						</a>
 					</div>
 					
-					<div class="top-right-item">
-						<a>
-							<span class="material-icons material-symbols-outlined">
-								shopping_cart
-							</span>
-						</a>
+					<div>
+						<input type="image" src="images/icons/cart.png" alt="cart">
 					</div>
 				</div>
 			</nav>
@@ -56,51 +47,35 @@
 			<div id="sidebar">
 				<ul>
 					<li>
-						<a href="products-phones" class="sidebar-link">
-							<span class="material-icons material-symbols-outlined">
-							smartphone
-							</span>
-						ΤΗΛΕΦΩΝΙΑ </a>
+						<a href="products-phones.html">ΤΗΛΕΦΩΝΙΑ </a>
 					</li>
 
 					<li>
-						<a href="products-laptops" class="sidebar-link">
-							<span class="material-icons material-symbols-outlined">
-							computer
-							</span>
-						ΥΠΟΛΟΓΙΣΤΕΣ </a>
+						<a href="products-laptops.html">ΥΠΟΛΟΓΙΣΤΕΣ </a>
 					</li>
 
 					<li>
-						<a href="products-laptops" class="sidebar-link">
-							<span class="material-icons material-symbols-outlined">
-							videocam
-							</span>
-						ΕΙΚΟΝΑ </a>
+						<a href="products-laptops.html">ΕΙΚΟΝΑ </a>
 					</li>
 
 					<li>
-						<a href="products-laptops" class="sidebar-link">
-							<span class="material-icons material-symbols-outlined">
-							music_note
-							</span>
-							ΗΧΟΣ </a>
+						<a href="products-laptops.html">ΗΧΟΣ </a>
 					</li>
 				</ul>
 			</div>
 		</aside>
 
 		<main id="main-container">
-			<div id="main-content" class="shadow">
+			<div id="main-content">
 				<section id="tech-support">
 				 <header>
 					<h1>Τεχνική υποστήριξη</h1>
 				 </header>
-				  <img src="images/tech-support.png" id="tech-support-img" class="left" alt="tech-support">
-				  <img src="images/tech-support.png" id="tech-support-img" class="right" alt="tech-support">
+				  <img src="images/tech-support.png" alt="tech-support">
+				  <img src="images/tech-support.png" alt="tech-support">
 				  
 
-					<form class="left" method="post" autocomplete="on">
+					<form method="post" autocomplete="on">
 						<fieldset>
 							<legend>Στοιχεία Πελάτη</legend>
 			  
@@ -138,37 +113,30 @@
 						<br><br>
 					
 						<button type="reset">Reset</button>
-					<button type="submit" class="right">Submit</button>
+					<button type="submit">Submit</button>
 					</form>
 			 
 				</section>  
 			</div>
 		</main>
 
-
 		<footer id="footer">
 			2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
 			<br><br>
 			<nav>
-				<span class="material-symbols-outlined">
-				call
-				</span> 
 				210 1234567 &nbsp;
-				<a href="https://www.youtube.com/"><img src="images/icons/youtube.png" class="icon" alt="youtube logo"> Youtube &nbsp;</a>
-				<a href="https://www.facebook.com/"><img src="images/icons/facebook.ico" class="icon" alt="facebook logo"> Facebook &nbsp;</a>
-				<a href="https://www.instagram.com/"><img src="images/icons/instagram.png" class="icon" alt="instagram logo"> Instagram &nbsp;</a>
+				<a href="https://www.youtube.com/"><img src="images/icons/youtube.png" alt="youtube logo"> Youtube &nbsp;</a>
+				<a href="https://www.facebook.com/"><img src="images/icons/facebook.ico" alt="facebook logo"> Facebook &nbsp;</a>
+				<a href="https://www.instagram.com/"><img src="images/icons/instagram.png" alt="instagram logo"> Instagram &nbsp;</a>
 			</nav>
 			<div id="opening-hours">
-				 <span class="material-symbols-outlined">
-					nest_clock_farsight_analog
-				</span>
 				Ωράριο λειτουργίας: &nbsp; <br>
-				<ul class="to-inline-block no-bull">
+				<ul>
 					<li>ΔΕΥ: 09:00 - 17:00</li>
 					<li>ΤΡΙ: 09:00 - 21:00</li>
 					<li>ΤΕΡ: 09:00 - 17:00</li>
 				</ul>
-				<ul class="to-inline-block no-bull">
+				<ul>
 					<li>ΠΕΜ: 09:00 - 21:00</li>
 					<li>ΠΑΡ: 09:00 - 21:00</li>
 					<li>ΣΑΒ: 09:00 - 15:00</li>
