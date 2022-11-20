@@ -1,0 +1,519 @@
+@font-face {
+	font-family: myFont;
+	src: local("Tahoma"),url("../fonts/Tahoma.ttf") format("truetype"),
+		 local("Helvetica"), url("../fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: myFont;
+	src: local("Tahoma-Bold"),url("../fonts/Tahoma-Bold.ttf") format("truetype"),
+	local("Helvetica-Bold"), url("../fonts/Helvetica-Bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+body {
+  /*Background color is a gradient of three colors and fixed so it doesn't repeat.
+    Text color is white. Sets text fonts and specifies line height.*/
+  /*font-family: 'Tahoma', 'Helvetica', sans-serif;*/
+	font-family: myFont, sans-serif;
+  background-image: linear-gradient(#6f0b9d, #99129b, #340055);
+  background-attachment: fixed;
+  color: #ffffff;
+  line-height: 1.2rem;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  /*Grid layout with 2 columns where the second id 4 times the first*/
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+header{
+  /*Specifies header's height*/
+  height: 2rem;
+}
+
+
+header, footer {
+  /*Make text in headers and footers smaller and bold*/
+  font-weight: bold;
+  font-size: 0.75rem;	
+  width: 100%;
+}
+
+footer {
+	/*Align text in center and live some space from main content*/
+	text-align: center;
+	margin-top: 2rem;
+	/*height: 5%;*/
+	position: relative;
+	z-index: 10;
+	/*Grid position spans all columns and is in the last row*/
+	grid-row-start: 4;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+footer a,
+footer a:hover, 
+footer a:visited, 
+footer a:active {
+	/*Link color for footers*/
+	color: #ff7300; 
+}
+
+main {
+	/*Align text in center*/
+	text-align: center;
+}
+
+article > p {
+	/*Live space from top*/
+	padding-top: 5rem;
+}
+
+article > header {
+  /*Specifies the width of a header in an article*/
+  font-size: 1rem;
+  height: auto;
+  width: 100%;
+}
+
+section > header {
+  /*Header's font and text alignment*/
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1,h2,h3,h4 {
+	/*Header's color*/
+	color: #ff7f00;
+
+}
+
+header a, header a:hover, header a:visited, header a:active,
+#sidebar a, #sidebar a:hover, #sidebar a:visited, #sidebar a:active {
+  /*Link color in headers*/
+  color: #340055;
+  text-decoration: none;
+}
+
+a, a:hover, a:visited, a:active {
+	/*Link color*/
+	color: #ffc400;
+	text-decoration: none;
+}
+
+table {
+	/*Space around tables and height*/
+	margin: 0.4rem;
+	height: 14rem;
+}
+
+th, td {
+	/*Border and width for th and td*/
+	border: 1px ridge #6f0b9d;
+	width: 12rem;
+}
+
+form {
+	/*Text color and alignment. Border, width and space around inside form. Space left outside the form*/
+	text-align: left;
+	border: 2px solid #6f0b9d;
+	width: 30rem;
+	padding: 1rem;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+fieldset {
+	/*Space around fieldset*/
+	padding: 0.5rem;
+}
+
+legend {
+	/*Bold text for legends*/
+	font-weight: bold;
+}
+
+label {
+	/*Label width and top alignment*/
+	display: inline-block;
+	width: 9rem;
+	vertical-align: top;
+}
+
+input {
+  /*Specifies input's width*/
+  width: 10rem;
+}
+
+strong {
+  /*Strong text is slightly bigger*/
+  font-size: 1.1rem;
+}
+
+main {
+	/*Grid position second column and is two rows high*/
+	grid-row-start: 2;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+header:first-of-type {
+	/*Grid position spans all columns and is in the first row*/
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+aside {
+	/*Grid position first column and is one row high*/
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.left {
+  /*Element floats left*/
+  float: left;
+}
+
+.right {
+  /*Element floats right*/
+  float: right;
+}
+
+.clear-float:after {
+	/*Clears elements float and making block so next elements are in a different block*/
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.product-header-text{
+	/*Elements have blank space from top*/
+	padding-top: 2rem;
+	margin: 0 5%;
+}
+
+.product-list {
+  /*Size of list and live space around*/
+  width: 12rem;
+  margin: 0.5rem;
+}
+
+.reviews {
+	border: 0.2rem solid #99129b;
+	border-radius: 0.4rem;
+	padding: 0.5rem;
+	margin: 0.3rem;
+}
+
+.category-list {
+	/*Size of list, floating and live space from bottom*/
+	width: 15rem;
+	height: 10rem;
+	margin-bottom: 1rem;
+	float: left;
+}
+
+.no-bull {
+  /*Make lists have no bullets*/
+  list-style-type: none;
+}
+
+.special-offer {
+	border: 1px solid #340055;
+	margin: 0.5rem;
+	flex-grow: 2;
+}
+
+
+.addtocart {
+	/*Color, text format and size for button add to cart*/
+	background-color: #99129b;
+	border-radius: 0.5rem;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1rem;
+	width: 6rem;
+	height: 2rem;
+}
+
+.to-inline-block {
+	/*Make element inline block*/
+	display: inline-block;
+}
+
+.addtocart:hover {
+	/*Change color when button add to cart is hovered*/
+	background-color: #cd0fd0;
+}
+
+.cart {
+	/*Width for cart and make button do nothing*/
+	width: 1.3rem;
+	pointer-events: none;
+}
+
+.icon {
+	/*Width for icons*/
+	width: 1rem;
+}
+
+#top-navbar {
+	display: flex;
+	align-items: center;
+	background-color: #ff7300;
+	position: fixed;
+	width: 100%;
+	height: 2rem;
+}
+
+#top-navbar > * {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+#top-right-nav {
+	text-align: right;	
+	flex-grow: 1;
+	display: flex;
+    align-items: center;
+	justify-content: flex-end;
+	margin: 0px;
+	height: 100%
+}
+
+#top-right-nav > * {
+	padding-left: 0.33rem;
+	padding-right: 0.33rem;
+	height: 100%
+}
+
+#top-right-nav .top-right-item{
+	transition: background 0.33s;
+	max-height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#top-right-nav .top-right-item a{
+	transition: color 0.33s;
+}
+
+
+#top-right-nav .top-right-item:hover 
+{
+  background: #562277;
+  max-height: 100%;
+}
+
+#top-right-nav .top-right-item:hover a{
+	color: #ff7300;
+}
+
+#main-container{
+	/*margin-left: 20%;*/
+	display: block;
+}
+
+#main-container, #main-content {
+	color: #6f0b9d;
+}
+
+#main-content {
+	width: 90%;
+	background-color: #ffffff;
+}
+#main-logo {
+	font-size: 1rem;
+}
+
+#laptops-list header > img {
+  /*Image width inside in headers for laptop list*/
+	width: 10rem;
+}
+
+#product-description header {
+  /*Header width  for product description*/
+	width: 15rem;
+}
+
+#product-description > header:first-of-type {
+  /*Header width auto for the first header*/
+	width: auto;
+}
+
+#basic-info {
+  /*Text style,live space from the left and auto height for basic info*/
+	font-size: 1.2rem ;
+	text-align: left;
+	padding-left: 2rem;
+  height: auto;
+}
+#basic-info img:first-of-type {
+  /*First image width and space around*/
+  width: 25rem;
+  padding-right: 1rem;
+}
+
+#basic-info a {
+  /*Link color for basic info*/
+  color: #ffc400;
+}
+
+#product-nav {
+	margin-left: 2.5rem;
+}
+
+#product-description p {
+  /*Text alignment and space around paragraphs*/
+	padding: 0 0.5rem 0 0.5rem;
+	text-align: justify;
+}
+
+#product-description p > img {
+  /*Image width inside paragraphs and space around*/
+  padding: 0 0.5rem 0.5rem 0.5rem;
+	width: 18rem;
+}
+
+#product-reviews {
+  /*Text style and live space around for product reviews*/
+  font: 1.2rem Capriola;
+	padding-left: 2rem;
+	text-align: left;
+	line-height: 1.5rem;
+}
+
+#product-categories li {
+  /*Width of li for product categories*/
+  width: 25rem;
+}
+
+#phone-list li {
+  /*Height of li for phone list*/
+  height: 14rem;
+}
+
+#prob-desc {
+  /*Live space from left for text area in form*/
+  padding-left: 0.8rem;
+}
+
+.tech-support-img {
+  /*Width of tech support image, space around and extra space from top*/
+  width: 15rem;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.shadow{
+	box-shadow: 5px 5px 10px #340055;
+}
+
+#sidebar{
+	width:20%;
+	margin: 0;
+	background: #ff9522;
+	color: #562277;
+	position: fixed;
+}
+
+#sidebar ul{
+	list-style-type: none;
+	display: block;
+	padding: 0rem;
+	margin: 0.5rem 0rem 0.5rem 0rem;
+	text-align: left;
+}
+
+#sidebar li{
+	list-style-type: none;
+	display: block;
+	transition: background-color 0.33s;
+}
+
+
+#sidebar a{
+	height: 100%;
+	width: 100%;
+
+	transition: color 0.33s;
+}
+
+.sidebar-link{
+	display: flex;
+	align-items: center;
+}
+
+.item {
+	display:flex; 
+	justify-content: center;
+}
+
+#sidebar li:hover{
+	 background-color: #562277;
+}
+
+#sidebar li:hover a{
+	 color: #ff9522;
+}
+
+#history p {
+  /*Space around paragraphs for history*/
+  padding: 0.5rem;
+  margin-left: 2rem;
+}
+
+#avatar {
+  /*Size of avatar image and make it circle*/
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#bio header {
+  /*Auto width for bio header*/
+  width: auto;
+}
+
+#bio p {
+  /*Space around paragraphs for bio*/
+  padding: 0.5rem;
+}
+
+#bio {
+  /*Bio takes up half the screen */
+  width: 50%;
+}
+
+#representatives {
+  /*Height for representatives*/
+	height: 15rem;
+}
+
+#representatives > header {
+  /*Space around for representatives header*/
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+#opening-hours {
+  /*Position and space around for opening hours*/
+  float: right;
+  margin-right: 2rem;
+}
+
+.material-icons, #main-logo{
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
+}
