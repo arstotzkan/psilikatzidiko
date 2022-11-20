@@ -1,0 +1,28 @@
+.product {
+	border: 1px solid #340055;
+	margin: 0.5rem;
+	flex-grow: 1;
+	height: 5rem;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.inside-product{
+	width: 100%;
+}
+
+.big-box{
+	width:100%; 
+	flex:100%;	
+}
+.small-box{
+	width:50%; 
+	flex:50%;
+}
+
+#main-container, #main-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
