@@ -197,8 +197,7 @@ aside {
 
 .product-header-text{
 	/*Elements have blank space from top*/
-	padding-top: 2rem;
-	margin: 0 5%;
+	padding-bottom: 2rem;
 }
 
 .product-list {
@@ -212,14 +211,6 @@ aside {
 	border-radius: 0.4rem;
 	padding: 0.5rem;
 	margin: 0.3rem;
-}
-
-.category-list {
-	/*Size of list, floating and live space from bottom*/
-	width: 15rem;
-	height: 10rem;
-	margin-bottom: 1rem;
-	float: left;
 }
 
 .no-bull {
@@ -393,11 +384,6 @@ aside {
 	line-height: 1.5rem;
 }
 
-#product-categories li {
-  /*Width of li for product categories*/
-  width: 25rem;
-}
-
 #phone-list li {
   /*Height of li for phone list*/
   height: 14rem;
@@ -569,4 +555,51 @@ aside {
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) { 
 
+}
+
+/*CATEGORIES*/
+#product-categories{
+	width: 90%
+}
+
+.product-category-container{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+}
+
+.product-category-container li{
+	width: 25%;
+}
+
+.product-category-container img{
+	width: 60%;
+	height: fit-content;
+}
+
+.product-category-container .category-header{
+	width: 100%;
+	padding-bottom: 1rem;
+}
+
+.category-list {
+	/*Size of list, floating and live space from bottom*/
+	height: 5rem;
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+	.product-category-container li{
+		width: 50%;
+	}
+}
+
+@media (max-width: 576px) { 
+	.product-category-container li{
+		width: 100%;
+	}
 }
