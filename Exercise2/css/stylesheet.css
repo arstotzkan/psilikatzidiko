@@ -99,9 +99,9 @@ form {
 	/*Text color and alignment. Border, width and space around inside form. Space left outside the form*/
 	text-align: left;
 	border: 2px solid #6f0b9d;
-	width: 30rem;
+	width: 50%;
 	padding: 1rem;
-	margin: 2rem 1rem 1rem 1rem;
+	margin: 2rem 0rem 1rem 1rem;
 }
 
 fieldset {
@@ -146,6 +146,27 @@ strong {
 	content:"";
 	display:block;
 	clear:both;
+}
+
+.product {
+	border: 2px solid #340055;
+	margin: 0.5rem;
+	height: 5rem;
+}
+
+.inside-product{
+	width: 100%;
+}
+
+.big-box{
+	width:100%;
+
+}
+
+.small-box{
+	width:30%;
+ 	display: inline-block;
+	vertical-align: middle;
 }
 
 .product-header-text{
@@ -360,10 +381,9 @@ strong {
 }
 
 .tech-support-img {
-  /*Width of tech support image, space around and extra space from top*/
-  width: 15rem;
-  padding: 2rem;
-  margin-top: 5rem;
+	/*Width of tech support image, space around and extra space from top*/
+	width: 20%;
+	margin-top: 5rem;
 }
 
 .shadow{
