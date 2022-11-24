@@ -303,6 +303,7 @@ strong {
 #main-content {
 	width: 90%;
 	background-color: #ffffff;
+	padding: 1rem;
 }
 #main-logo {
 	font-size: 1rem;
