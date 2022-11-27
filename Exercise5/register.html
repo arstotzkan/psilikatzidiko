@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="el">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>User Registration</title>
+		<link rel="stylesheet" href="../Exercise4/css/stylesheet.css">
+		<link rel="stylesheet" href="../Exercise4/css/main-page.css">
+		<link rel="icon" type="image/png" href="../Exercise1/images/icons/icon1.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0..1,-50..200" />
+	  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
+		<script src="form.js" defer></script>
+	</head>
+
+	<body>
+
+		<header>
+			<nav id="top-navbar" class="shadow">
+				<span id="shop-name">
+					<a href="index.html" id="main-logo">Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ</a>
+				</span>
+
+				<input type="text" id="search-bar">
+
+				<div id="top-right-nav">
+					<div class="top-right-item">
+						<a href="product-categories.html" id="categories-link">
+							ΚΑΤΗΓΟΡΙΕΣ
+						</a>
+					</div>
+
+					<div class="top-right-item">
+						<a href="about-us.html" id="bio-link">
+							ΠΟΙΟΙ ΕΙΜΑΣΤΕ
+						</a>
+					</div>
+					
+					<div class="top-right-item">
+						<a href="tech-support.html" id="contract-link">
+							ΜΙΛΗΣΤΕ ΜΑΣ
+						</a>
+					</div>
+					
+					<div class="top-right-item">
+						<a>
+							<span class="material-icons material-symbols-outlined">
+								shopping_cart
+							</span>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<aside>
+			<div id="sidebar">
+				<ul>
+					<li>
+						<a href="products-phones.html" class="sidebar-link">
+							<span class="material-icons material-symbols-outlined">
+							smartphone
+							</span>
+						ΤΗΛΕΦΩΝΙΑ </a>
+					</li>
+
+					<li>
+						<a href="products-laptops.html" class="sidebar-link">
+							<span class="material-icons material-symbols-outlined">
+							computer
+							</span>
+						ΥΠΟΛΟΓΙΣΤΕΣ </a>
+					</li>
+
+					<li>
+						<a href="products-laptops.html" class="sidebar-link">
+							<span class="material-icons material-symbols-outlined">
+							videocam
+							</span>
+						ΕΙΚΟΝΑ </a>
+					</li>
+
+					<li>
+						<a href="products-laptops.html" class="sidebar-link">
+							<span class="material-icons material-symbols-outlined">
+							music_note
+							</span>
+							ΗΧΟΣ </a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+			
+		<main id="main-container">
+			<div id="main-content" class="shadow">
+				<section id="tech-support">
+				 <header>
+					<h1>Εγγραφή χρήστη</h1>
+				 </header>
+					<form class="left" method="post" autocomplete="on">
+						<!-- TODO make it look nice with css -->
+						<fieldset>
+							<legend>Προσωπικά Στοιχεία</legend>
+
+							<label for="customer-name">Ονοματεπώνυμο: </label>
+							<input name="customer-name" id="customer-name" type="text" minlength="6" pattern="^[\u0386-\u03ce ]{3,30}$" placeholder="Κωνσταντίνος Παπαδόπουλος" autocomplete="name" required>
+
+							<label for="customer-email">Email: </label>
+							<input name="customer-email" id="customer-email" type="email" placeholder="someone@example.com"  autocomplete="email" pattern="[a-z0-9]{1,30}@[a-z0-9]{1,20}.([a-z]{2}|[a-z]{3})" required>
+
+							<label for="customer-address">Διεύθυνση Κατοικίας: </label>
+							<input name="customer-address" id="customer-address" type="text" placeholder="Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121"  pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}, [\u0386-\u03ce ]{3,}, [\u0386-\u03ce ]{3,}, [0-9]{5}$" required>
+
+							<label for="customer-birthday">Ημερομηνία Γέννησης: </label>
+							<input name="customer-birthday" id="customer-birthday" type="date" placeholder="10/05/1995"  min="1922-01-01" autocomplete="bday" required>
+							<p class="error birthday-error"></p>
+
+							<label for="customer-land-line-phone">Σταθερό: </label>
+							<input name="customer-land-line-phone" id="customer-land-line-phone" type="tel" placeholder="2101234567" pattern="2[1-8]{1}[0-9]{8}">
+
+							<label for="customer-cellphone">Κινητό: </label>
+							<input name="customer-cellphone" id="customer-cellphone" type="tel" placeholder="6912345678"  pattern="69[0-9]{8}" required>
+						</fieldset>
+
+						<fieldset>
+							<legend>Στοιχεία Πληρωμής και Αποστολής Προϊόντων</legend>
+
+							<label for="counter-payment">Αντικαταβολή</label>
+							<input type="checkbox" id="counter-payment" name="customer-pay-method" value="counter-payment">
+
+							<label for="debit-credit-card">Χρεωστική/Πιστωτική Κάρτα</label>
+							<input type="checkbox" id="debit-credit-card" name="customer-pay-method" value="debit-credit-card">
+
+							<label for="paypal">Paypal</label>
+							<input type="checkbox" id="paypal" name="customer-pay-method" value="paypal">
+
+							<details id="customer-card">
+								<summary>Χρεωστική/Πιστωτική Κάρτα</summary>
+								<label for="customer-card-number">Αριθμός Κάρτας: </label>
+								<input name="customer-card-number" id="customer-card-number" type="tel" placeholder="1234567890123456" pattern="[0-9]{14,16}" autocomplete="cc-number">
+
+								<label for="customer-card-name">Ονοματεπώνυμο κατόχου: </label>
+								<input name="customer-card-name" id="customer-card-name" type="text" pattern="^[A-Z. ]{3,30}$" autocomplete="cc-name">
+
+								<label for="customer-card-exp-date">Ημερομηνία Λήξης: </label>
+								<input name="customer-card-exp-date" id="customer-card-exp-date" type="text" maxlength="5" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" autocomplete="cc-exp">
+								<p class="error exp-card-error"></p>
+
+								<label for="customer-card-cvv">CVV: </label>
+								<input name="customer-card-cvv" id="customer-card-cvv" type="number" placeholder="123" pattern="[0-9]{3,4}" autocomplete="cc-csc">
+							</details>
+
+							<details id="customer-paypal">
+								<summary>Paypal</summary>
+								<label for="customer-paypal-id">Paypal ID: </label>
+								<input name="customer-paypal-id" id="customer-paypal-id" type="text" pattern="^[a-zA-Z0-9]*$">
+							</details>
+
+							<details>
+								<summary>Διεύθυνση Αποστολής(αν διαφέρει από τη διεύθυνση κατοικίας)</summary>
+								<label for="customer-shipping-address">Διεύθυνση Αποστολής: </label>
+								<input name="customer-shipping-address" id="customer-shipping-address" type="text" placeholder="Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121" pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}, [\u0386-\u03ce ]{3,}, [\u0386-\u03ce ]{3,}, [0-9]{5}$">
+							</details>
+						</fieldset>
+
+						<fieldset>
+							<legend>Username & Password</legend>
+
+							<label for="customer-username">Όνομα χρήστη: </label>
+							<input name="customer-username" id="customer-username" type="text"  required autocomplete="name" pattern="^[A-Za-z0-9]{7,20}$">
+
+							<label for="customer-password">Κωδικός: </label>
+							<input name="customer-password" id="customer-password" type="password" required autocomplete="new-password">
+							<p class="error password-error"></p>
+
+							<label for="customer-password-repeat">Επανάληψη κωδικού: </label>
+							<input name="customer-password-repeat" id="customer-password-repeat" type="password" required autocomplete="new-password">
+							<p class="error password-repeat-error"></p>
+						</fieldset>
+
+						<fieldset>
+							<legend>Τρόποι επικοινωνίας για ενημέρωση παραγγελιών και προσφορών</legend>
+
+							<label for="sms">SMS</label>
+							<input type="checkbox" id="sms" name="customer-communication" value="sms">
+
+							<label for="email">Email</label>
+							<input type="checkbox" id="email" name="customer-communication" value="email">
+
+							<label for="viber">Viber</label>
+							<input type="checkbox" id="viber" name="customer-communication" value="viber">
+
+							<label for="whats-app">WhatsApp</label>
+							<input type="checkbox" id="whats-app" name="customer-communication" value="whats-app">
+						</fieldset>
+
+						<p>Ακολουθεί ένα σύντομο ερωτηματολόγιο όπου μπορείτε να συμπληρώσετε αν το επιθυμείτε.</p>
+
+						<fieldset>
+							<legend>Σύντομο ερωτηματολόγιο</legend>
+
+							<p>Φύλο:</p>
+							<label for="man">Άνδρας</label>
+							<input type="radio" id="man" name="gender" value="man">
+
+							<label for="woman">Γυναίκα</label>
+							<input type="radio" id="woman" name="gender" value="woman">
+
+							<label for="gender-other-check">Άλλο</label>
+							<input type="radio" id="gender-other-check" name="gender" value="gender-other-check">
+							<input name="gender-other" id="gender-other-input" type="text">
+
+							<!-- TODO at least one more field with datalist -->
+							<p>Χώρα καταγωγής:</p>
+							<label for="country-origin">Επιλέξτε χώρα:</label>
+							<input list="country-list" id="country-origin" name="country-origin">
+							<datalist id="country-list">
+								<option value="Ελλάδα">
+								<option value="Κύπρος">
+								<option value="Γαλλία">
+								<option value="Γερμανία">
+								<option value="Ιταλία">
+								<option value="Ισπανία">
+							</datalist>
+
+
+							<p>Πόσο συχνά αγοράζετε από ηλεκτρονικά καταστήματα:</p>
+							<label for="vey-often-bo">Πολύ συχνά</label>
+							<input type="radio" id="vey-often-bo" name="buy-online" value="vey-often">
+
+							<label for="often-bo">Συχνά</label>
+							<input type="radio" id="often-bo" name="buy-online" value="often">
+
+							<label for="neither-frequent-nor-rare-bo">Ούτε συχνά-Ούτε σπάνια</label>
+							<input type="radio" id="neither-frequent-nor-rare-bo" name="buy-online" value="neither-frequent-nor-rare">
+
+							<label for="rare-bo">Σπάνια</label>
+							<input type="radio" id="rare-bo" name="buy-online" value="rare">
+
+							<label for="very-rare-bo">Πολύ σπάνια</label>
+							<input type="radio" id="very-rare-bo" name="buy-online" value="very-rare">
+
+
+							<p>Πoιά προϊόντα αγοράζετε από ηλεκτρονικά καταστήματα:</p>
+							<label for="phone-bo">Κινητό</label>
+							<input type="checkbox" id="phone-bo" name="products-bought-online" value="phone">
+
+							<label for="pc-bo">Υπολογιστή</label>
+							<input type="checkbox" id="pc-bo" name="products-bought-online" value="pc">
+
+							<label for="tv-bo">Τηλεόραση</label>
+							<input type="checkbox" id="tv-bo" name="products-bought-online" value="tv">
+
+							<label for="headphones-bo">Ακουστικά</label>
+							<input type="checkbox" id="headphones-bo" name="products-bought-online" value="headphones">
+
+							<label for="product-other-check-bo">Άλλο</label>
+							<input type="checkbox" id="product-other-check-bo" name="products-bought-online" value="product-other-check">
+							<input name="product-other-input-bo" id="product-other-input-bo" type="text">
+
+
+							<p>Πόσο συχνά αγοράζετε προϊόντα σε προσφορά:</p>
+							<label for="vey-often-bio">Πολύ συχνά</label>
+							<input type="radio" id="vey-often-bio" name="buy-on-offer" value="vey-often">
+
+							<label for="often-bio">Συχνά</label>
+							<input type="radio" id="often-bio" name="buy-on-offer" value="often">
+
+							<label for="neither-frequent-nor-rare-bio">Ούτε συχνά-Ούτε σπάνια</label>
+							<input type="radio" id="neither-frequent-nor-rare-bio" name="buy-on-offer" value="neither-frequent-nor-rare">
+
+							<label for="rare-bio">Σπάνια</label>
+							<input type="radio" id="rare-bio" name="buy-on-offer" value="rare">
+
+							<label for="very-rare-bio">Πολύ σπάνια</label>
+							<input type="radio" id="very-rare-bio" name="buy-on-offer" value="very-rare">
+
+
+							<p>Ποια προϊόντα πιστεύετε ότι θα έπρεπε να έχουν προσφορά πιο συχνά:</p>
+							<label for="phone-pof">Κινητό</label>
+							<input type="checkbox" id="phone-pof" name="products-on-offer" value="phone">
+
+							<label for="pc-pof">Υπολογιστή</label>
+							<input type="checkbox" id="pc-pof" name="products-on-offer" value="pc">
+
+							<label for="tv-pof">Τηλεόραση</label>
+							<input type="checkbox" id="tv-pof" name="products-on-offer" value="tv">
+
+							<label for="headphones-pof">Ακουστικά</label>
+							<input type="checkbox" id="headphones-pof" name="products-on-offer" value="headphones">
+
+							<label for="product-other-check-pof">Άλλο</label>
+							<input type="checkbox" id="product-other-check-pof" name="products-on-offer" value="product-other-check">
+							<input name="product-other-input-pof" id="product-other-input-pof" type="text">
+
+
+							<p>Με ποιό τρόπο πληρώνετε συνήθως:</p>
+							<label for="card">Κάρτα</label>
+							<input type="radio" id="card" name="frequent-pay-method" value="card">
+
+							<label for="bank-account">Μέσω λογαριασμού τραπέζης </label>
+							<input type="radio" id="bank-account" name="frequent-pay-method" value="bank-account">
+
+							<label for="cash">Μετρητά</label>
+							<input type="radio" id="cash" name="frequent-pay-method" value="cash">
+
+							<label for="paypal-m">Paypal</label>
+							<input type="radio" id="paypal-m" name="frequent-pay-method" value="paypal">
+
+
+							<p>Πώς θα θέλατε να παραλάβετε την παραγγελία σας:</p>
+							<label for="in-store">Παραλαβή από το κατάστημα</label>
+							<input type="checkbox" id="in-store" name="shipping-method" value="in-store">
+
+							<label for="sent-to-customer">Αποστολή σε εσάς</label>
+							<input type="checkbox" id="sent-to-customer" name="shipping-method" value="sent-to-customer">
+						</fieldset>
+					
+						<button type="reset">Reset</button>
+						<button type="submit" class="right">Submit</button>
+					</form>
+			 
+				</section>  
+			</div>
+		</main>
+
+
+		<footer id="footer">
+			2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
+			<br><br>
+			<nav>
+				<span class="material-symbols-outlined">
+				call
+				</span> 
+				210 1234567 &nbsp;
+				<a href="https://www.youtube.com/"><img src="../Exercise1/images/icons/youtube.png" class="icon" alt="youtube logo"> Youtube &nbsp;</a>
+				<a href="https://www.facebook.com/"><img src="../Exercise1/images/icons/facebook.ico" class="icon" alt="facebook logo"> Facebook &nbsp;</a>
+				<a href="https://www.instagram.com/"><img src="../Exercise1/images/icons/instagram.png" class="icon" alt="instagram logo"> Instagram &nbsp;</a>
+			</nav>
+			<div id="opening-hours">
+				 <span class="material-symbols-outlined">
+					nest_clock_farsight_analog
+				</span>
+				Ωράριο λειτουργίας: &nbsp; <br>
+				<ul class="to-inline-block no-bull">
+					<li>ΔΕΥ: 09:00 - 17:00</li>
+					<li>ΤΡΙ: 09:00 - 21:00</li>
+					<li>ΤΕΡ: 09:00 - 17:00</li>
+				</ul>
+				<ul class="to-inline-block no-bull">
+					<li>ΠΕΜ: 09:00 - 21:00</li>
+					<li>ΠΑΡ: 09:00 - 21:00</li>
+					<li>ΣΑΒ: 09:00 - 15:00</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
