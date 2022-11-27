@@ -7,6 +7,7 @@
 		<title>Tech Support</title>
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<link rel="stylesheet" href="css/main-page.css">
+		<link rel="stylesheet" href="css/tech-support.css">
 		<link rel="icon" type="image/png" href="../Exercise1/images/icons/icon1.png">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 		  rel="stylesheet">
@@ -94,54 +95,61 @@
 		<main id="main-container">
 			<div id="main-content" class="shadow">
 				<section id="tech-support">
-				 <header>
-					<h1>Τεχνική υποστήριξη</h1>
-				 </header>
-				  <img src="../Exercise1/images/tech-support.png" class="left tech-support-img" alt="tech-support">
-				  <img src="../Exercise1/images/tech-support.png" class="right tech-support-img" alt="tech-support">
-				  
+				 	<header>
+						<h1>Τεχνική υποστήριξη</h1>
+					</header>
 
-					<form class="left" method="post" autocomplete="on">
-						<fieldset>
-							<legend>Στοιχεία Πελάτη</legend>
-			  
-							<label for="customer-name">Ονοματεπώνυμο: </label>
-							<input name="customer-name" id="customer-name" type="text" required>
-							<br><br>
-			  
-							<label for="customer-email">Email: </label>
-							<input name="customer-email" id="customer-email" type="email" placeholder="someone@example.com" required>
-							<br><br>
-			  
-							<label for="customer-phone">Τηλέφωνο: </label>
-							<input name="customer-phone" id="customer-phone" type="tel" placeholder="2101234567 / 6912345678" required>
-						</fieldset>
-						<br>
+					<div class="flex-container justify-content-center">
+
+						<div class="tech-support-img-container">
+							<img src="../Exercise1/images/tech-support.png" class="tech-support-img" alt="tech-support">
+						</div>
 					
-						<fieldset>
-							<legend>Πληροφορίες προϊόντος</legend>
-			  
-							<label for="product-code">Κωδικός προϊόντος: </label>
-							<input name="product-code" id="product-code" type="text" required>
+						<form method="post" autocomplete="on" id="tech-support-form">
+							<fieldset>
+								<legend>Στοιχεία Πελάτη</legend>
+				
+								<label for="customer-name">Ονοματεπώνυμο: </label>
+								<input name="customer-name" id="customer-name" type="text" required>
+								<br><br>
+				
+								<label for="customer-email">Email: </label>
+								<input name="customer-email" id="customer-email" type="email" placeholder="someone@example.com" required>
+								<br><br>
+				
+								<label for="customer-phone">Τηλέφωνο: </label>
+								<input name="customer-phone" id="customer-phone" type="tel" placeholder="2101234567 / 6912345678" required>
+							</fieldset>
+							<br>
+						
+							<fieldset>
+								<legend>Πληροφορίες προϊόντος</legend>
+				
+								<label for="product-code">Κωδικός προϊόντος: </label>
+								<input name="product-code" id="product-code" type="text" required>
+								<br><br>
+				
+								<label for="buy-date">Ημερομηνία αγοράς: </label>
+								<input name="buy-date" id="buy-date" type="date" required>
+								<br><br>
+				
+								<label for="receipt">Απόδειξη αγοράς: </label>
+								<input name="receipt" id="receipt" type="file" required>
+							</fieldset>
+							<br>
+						
+							<label id="prob-desc" for="problem-description">Περιγραφή προβλήματος: </label>
+							<textarea name="problem-description" id="problem-description" required></textarea>
 							<br><br>
-			  
-							<label for="buy-date">Ημερομηνία αγοράς: </label>
-							<input name="buy-date" id="buy-date" type="date" required>
-							<br><br>
-			  
-							<label for="receipt">Απόδειξη αγοράς: </label>
-							<input name="receipt" id="receipt" type="file" required>
-						</fieldset>
-						<br>
-					
-						<label id="prob-desc" for="problem-description">Περιγραφή προβλήματος: </label>
-						<textarea name="problem-description" id="problem-description" rows="7" cols="35" required></textarea>
-						<br><br>
-					
-						<button type="reset">Reset</button>
-					<button type="submit" class="right">Submit</button>
-					</form>
-			 
+						
+							<button type="reset">Reset</button>
+						<button type="submit" class="right">Submit</button>
+						</form>
+
+						<div class="tech-support-img-container">
+							<img src="../Exercise1/images/tech-support.png" class="tech-support-img" alt="tech-support">
+						</div>
+					</div>
 				</section>  
 			</div>
 		</main>

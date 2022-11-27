@@ -121,7 +121,6 @@ form {
 	border: 2px solid #6f0b9d;
 	width: 30rem;
 	padding: 1rem;
-    margin: 2rem 1rem 1rem 1rem;
 }
 
 fieldset {
@@ -188,6 +187,14 @@ aside {
 	padding-bottom: 2rem;
 }
 
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.justify-content-center{
+	justify-content: center;
+}
 .product-list {
   /*Size of list and live space around*/
   width: 12rem;
@@ -384,13 +391,6 @@ aside {
   padding-left: 0.8rem;
 }
 
-.tech-support-img {
-  /*Width of tech support image, space around and extra space from top*/
-  width: 15rem;
-  padding: 2rem;
-  margin-top: 5rem;
-}
-
 .shadow{
 	box-shadow: 5px 5px 10px #340055;
 }
@@ -551,6 +551,7 @@ aside {
 		justify-self: center;
 		justify-content: center;
 	}
+
 }
 
 /* Small devices (landscape phones, 576px and down) */
