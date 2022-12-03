@@ -1,147 +1,140 @@
 <!DOCTYPE html>
 <html lang="el">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Tech Support</title>
-		<link rel="icon" type="image/png" href="images/icons/icon1.png">
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        <title>Tech Support</title>
+        <link href="images/icons/icon1.png" rel="icon" type="image/png">
+    </head>
 
-	<body>
-		<header>
-			<nav id="top-navbar">
+    <body>
+        <header>
+            <nav id="top-navbar">
 				<span id="shop-name">
 					<a href="index.html" id="main-logo">Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ</a>
 				</span>
 
-				<input type="text" id="search-bar">
+                <input id="search-bar" type="text">
 
-				<div id="top-right-nav">
-					<div>
-						<a href="product-categories.html" id="categories-link">
-							ΚΑΤΗΓΟΡΙΕΣ
-						</a>
-					</div>
+                <a href="product-categories.html" id="categories-link">
+                    ΚΑΤΗΓΟΡΙΕΣ
+                </a>
 
-					<div>
-						<a href="about-us.html" id="bio-link">
-							ΠΟΙΟΙ ΕΙΜΑΣΤΕ
-						</a>
-					</div>
-					
-					<div>
-						<a href="tech-support.html" id="contract-link">
-							ΜΙΛΗΣΤΕ ΜΑΣ
-						</a>
-					</div>
-					
-					<div>
-						<input type="image" src="images/icons/cart.png" alt="cart">
-					</div>
-				</div>
-			</nav>
-		</header>
+                <a href="about-us.html" id="bio-link">
+                    ΠΟΙΟΙ ΕΙΜΑΣΤΕ
+                </a>
 
-		<aside>
-			<div id="sidebar">
-				<ul>
-					<li>
-						<a href="products-phones.html">ΤΗΛΕΦΩΝΙΑ </a>
-					</li>
+                <a href="tech-support.html" id="contract-link">
+                    ΜΙΛΗΣΤΕ ΜΑΣ
+                </a>
 
-					<li>
-						<a href="products-laptops.html">ΥΠΟΛΟΓΙΣΤΕΣ </a>
-					</li>
+                <input alt="cart" src="images/icons/cart.png" type="image">
 
-					<li>
-						<a href="products-laptops.html">ΕΙΚΟΝΑ </a>
-					</li>
+            </nav>
+        </header>
 
-					<li>
-						<a href="products-laptops.html">ΗΧΟΣ </a>
-					</li>
-				</ul>
-			</div>
-		</aside>
+        <aside>
+            <ul>
+                <li>
+                    <a href="products-phones.html">ΤΗΛΕΦΩΝΙΑ </a>
+                </li>
 
-		<main id="main-container">
-			<div id="main-content">
-				<section id="tech-support">
-				 <header>
-					<h1>Τεχνική υποστήριξη</h1>
-				 </header>
-				  <img src="images/tech-support.png" alt="tech-support">
-				  <img src="images/tech-support.png" alt="tech-support">
-				  
+                <li>
+                    <a href="products-laptops.html">ΥΠΟΛΟΓΙΣΤΕΣ </a>
+                </li>
 
-					<form method="post" autocomplete="on">
-						<fieldset>
-							<legend>Στοιχεία Πελάτη</legend>
-			  
-							<label for="customer-name">Ονοματεπώνυμο: </label>
-							<input name="customer-name" id="customer-name" type="text" required>
-							<br><br>
-			  
-							<label for="customer-email">Email: </label>
-							<input name="customer-email" id="customer-email" type="email" placeholder="someone@example.com" required>
-							<br><br>
-			  
-							<label for="customer-phone">Τηλέφωνο: </label>
-							<input name="customer-phone" id="customer-phone" type="tel" placeholder="2101234567 / 6912345678" required>
-						</fieldset>
-						<br>
-					
-						<fieldset>
-							<legend>Πληροφορίες προϊόντος</legend>
-			  
-							<label for="product-code">Κωδικός προϊόντος: </label>
-							<input name="product-code" id="product-code" type="text" required>
-							<br><br>
-			  
-							<label for="buy-date">Ημερομηνία αγοράς: </label>
-							<input name="buy-date" id="buy-date" type="date" required>
-							<br><br>
-			  
-							<label for="receipt">Απόδειξη αγοράς: </label>
-							<input name="receipt" id="receipt" type="file" required>
-						</fieldset>
-						<br>
-					
-						<label id="prob-desc" for="problem-description">Περιγραφή προβλήματος: </label>
-						<textarea name="problem-description" id="problem-description" rows="7" cols="35" required></textarea>
-						<br><br>
-					
-						<button type="reset">Reset</button>
-					<button type="submit">Submit</button>
-					</form>
-			 
-				</section>  
-			</div>
-		</main>
+                <li>
+                    <a href="products-laptops.html">ΕΙΚΟΝΑ </a>
+                </li>
 
-		<footer id="footer">
-			2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
-			<br><br>
-			<nav>
-				210 1234567 &nbsp;
-				<a href="https://www.youtube.com/"><img src="images/icons/youtube.png" alt="youtube logo"> Youtube &nbsp;</a>
-				<a href="https://www.facebook.com/"><img src="images/icons/facebook.ico" alt="facebook logo"> Facebook &nbsp;</a>
-				<a href="https://www.instagram.com/"><img src="images/icons/instagram.png" alt="instagram logo"> Instagram &nbsp;</a>
-			</nav>
-			<div id="opening-hours">
-				Ωράριο λειτουργίας: &nbsp; <br>
-				<ul>
-					<li>ΔΕΥ: 09:00 - 17:00</li>
-					<li>ΤΡΙ: 09:00 - 21:00</li>
-					<li>ΤΕΡ: 09:00 - 17:00</li>
-				</ul>
-				<ul>
-					<li>ΠΕΜ: 09:00 - 21:00</li>
-					<li>ΠΑΡ: 09:00 - 21:00</li>
-					<li>ΣΑΒ: 09:00 - 15:00</li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+                <li>
+                    <a href="products-laptops.html">ΗΧΟΣ </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main id="main-container">
+            <section id="tech-support">
+                <header>
+                    <h1>Τεχνική υποστήριξη</h1>
+                </header>
+                <img alt="tech-support" src="images/tech-support.png">
+                <img alt="tech-support" src="images/tech-support.png">
+
+                <form autocomplete="on" method="post">
+                    <fieldset>
+                        <legend>Στοιχεία Πελάτη</legend>
+
+                        <label for="customer-name">Ονοματεπώνυμο: </label>
+                        <input id="customer-name" name="customer-name" required type="text">
+                        <br><br>
+
+                        <label for="customer-email">Email: </label>
+                        <input id="customer-email" name="customer-email" placeholder="someone@example.com" required
+                               type="email">
+                        <br><br>
+
+                        <label for="customer-phone">Τηλέφωνο: </label>
+                        <input id="customer-phone" name="customer-phone" placeholder="2101234567 / 6912345678"
+                               required type="tel">
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend>Πληροφορίες προϊόντος</legend>
+
+                        <label for="product-code">Κωδικός προϊόντος: </label>
+                        <input id="product-code" name="product-code" required type="text">
+                        <br><br>
+
+                        <label for="buy-date">Ημερομηνία αγοράς: </label>
+                        <input id="buy-date" name="buy-date" required type="date">
+                        <br><br>
+
+                        <label for="receipt">Απόδειξη αγοράς: </label>
+                        <input id="receipt" name="receipt" required type="file">
+                    </fieldset>
+                    <br>
+
+                    <label for="problem-description" id="prob-desc">Περιγραφή προβλήματος: </label>
+                    <textarea cols="35" id="problem-description" name="problem-description" required
+                              rows="7"></textarea>
+                    <br><br>
+
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer id="footer">
+            2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
+            <br><br>
+            <nav>
+                210 1234567 &nbsp;
+                <a href="https://www.youtube.com/"><img alt="youtube logo" src="images/icons/youtube.png"> Youtube
+                    &nbsp;</a>
+                <a href="https://www.facebook.com/"><img alt="facebook logo" src="images/icons/facebook.ico"> Facebook
+                    &nbsp;</a>
+                <a href="https://www.instagram.com/"><img alt="instagram logo" src="images/icons/instagram.png">
+                    Instagram &nbsp;</a>
+            </nav>
+            Ωράριο λειτουργίας: &nbsp; <br>
+            <ul>
+                <li>ΔΕΥ: 09:00 - 17:00</li>
+                <li>ΤΡΙ: 09:00 - 21:00</li>
+                <li>ΤΕΡ: 09:00 - 17:00</li>
+            </ul>
+            <ul>
+                <li>ΠΕΜ: 09:00 - 21:00</li>
+                <li>ΠΑΡ: 09:00 - 21:00</li>
+                <li>ΣΑΒ: 09:00 - 15:00</li>
+            </ul>
+
+        </footer>
+    </body>
 </html>

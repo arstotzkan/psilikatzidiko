@@ -1,166 +1,220 @@
 <!DOCTYPE html>
 <html lang="el">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Categories</title>
-		<link rel="stylesheet" href="css/stylesheet.css">
-		<link rel="stylesheet" href="css/main-page.css">
-		<link rel="icon" type="image/png" href="../Exercise1/images/icons/icon1.png">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-		  rel="stylesheet">
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0..1,-50..200" />
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        <title>Categories</title>
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link href="css/main-page.css" rel="stylesheet">
+        <link href="../Exercise1/images/icons/icon1.png" rel="icon" type="image/png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0..1,-50..200"
+              rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0"
+              rel="stylesheet"/>
+    </head>
 
-	<body>
-		<header>
-			<nav id="top-navbar" class="shadow">
+    <body>
+        <header>
+            <nav class="shadow" id="top-navbar">
 				<span id="shop-name">
 					<a href="index.html" id="main-logo">Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ</a>
 				</span>
 
-				<input type="text" id="search-bar">
+                <input id="search-bar" type="text">
 
-				<div id="top-right-nav">
-					<div class="top-right-item">
-						<a href="product-categories.html" id="categories-link">
-							ΚΑΤΗΓΟΡΙΕΣ
-						</a>
-					</div>
+                <div id="top-right-nav">
+                    <div class="top-right-item">
+                        <a href="product-categories.html" id="categories-link">
+                            ΚΑΤΗΓΟΡΙΕΣ
+                        </a>
+                    </div>
 
-					<div class="top-right-item">
-						<a href="about-us.html" id="bio-link">
-							ΠΟΙΟΙ ΕΙΜΑΣΤΕ
-						</a>
-					</div>
-					
-					<div class="top-right-item">
-						<a href="tech-support.html" id="contract-link">
-							ΜΙΛΗΣΤΕ ΜΑΣ
-						</a>
-					</div>
-					
-					<div class="top-right-item">
-						<a>
+                    <div class="top-right-item">
+                        <a href="about-us.html" id="bio-link">
+                            ΠΟΙΟΙ ΕΙΜΑΣΤΕ
+                        </a>
+                    </div>
+
+                    <div class="top-right-item">
+                        <a href="tech-support.html" id="contract-link">
+                            ΜΙΛΗΣΤΕ ΜΑΣ
+                        </a>
+                    </div>
+
+                    <div class="top-right-item">
+                        <a>
 							<span class="material-icons material-symbols-outlined">
 								shopping_cart
 							</span>
-						</a>
-					</div>
-				</div>
-			</nav>
-		</header>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-		<aside>
-			<div id="sidebar">
-				<ul>
-					<li>
-						<a href="products-phones.html" class="sidebar-link">
+        <aside>
+            <div id="sidebar">
+                <ul>
+                    <li>
+                        <a class="sidebar-link" href="products-phones.html">
 							<span class="material-icons material-symbols-outlined">
 							smartphone
 							</span>
-						ΤΗΛΕΦΩΝΙΑ </a>
-					</li>
+                            ΤΗΛΕΦΩΝΙΑ </a>
+                    </li>
 
-					<li>
-						<a href="products-laptops.html" class="sidebar-link">
+                    <li>
+                        <a class="sidebar-link" href="products-laptops.html">
 							<span class="material-icons material-symbols-outlined">
 							computer
 							</span>
-						ΥΠΟΛΟΓΙΣΤΕΣ </a>
-					</li>
+                            ΥΠΟΛΟΓΙΣΤΕΣ </a>
+                    </li>
 
-					<li>
-						<a href="products-laptops.html" class="sidebar-link">
+                    <li>
+                        <a class="sidebar-link" href="products-laptops.html">
 							<span class="material-icons material-symbols-outlined">
 							videocam
 							</span>
-						ΕΙΚΟΝΑ </a>
-					</li>
+                            ΕΙΚΟΝΑ </a>
+                    </li>
 
-					<li>
-						<a href="products-laptops.html" class="sidebar-link">
+                    <li>
+                        <a class="sidebar-link" href="products-laptops.html">
 							<span class="material-icons material-symbols-outlined">
 							music_note
 							</span>
-							ΗΧΟΣ </a>
-					</li>
-				</ul>
-			</div>
-		</aside>
-			
-		<main id="main-container">
-			<div id="main-content" class="shadow">
-				<nav id="product-categories">
-					<ul class="product-category-container no-bull">
-						<li class="category-header"><h2><span class="material-icons material-symbols-outlined">smartphone</span>&nbsp;Τηλεφωνία</h2></li>
-						<li><img src="../Exercise1/images/categories/phone.png"  class="category-list" alt="phone"><p class="product-header-text"><a href="products-phones.html" id="prod-phones-link">Κινητά Τηλέφωνα</a></p></li>
-						<li><img src="../Exercise1/images/categories/case.png" class="category-list" alt="case"><p class="product-header-text">Θήκες</p></li>
-						<li><img src="../Exercise1/images/categories/charger.png" class="category-list" alt="charger"><p class="product-header-text">Φορτιστές</p></li>
-						<li><img src="../Exercise1/images/categories/power-bank.png" class="category-list" alt="power bank"><p class="product-header-text">Power Banks</p></li>
-					</ul>
+                            ΗΧΟΣ </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
 
-					<ul class="product-category-container no-bull">
-						<li class="category-header"><h2><span class="material-icons material-symbols-outlined"> computer </span>&nbsp;Υπολογιστές</h2> </li>
-						<li><img src="../Exercise1/images/categories/laptop.png" class="category-list" alt="laptop"><p class="product-header-text"><a href="products-laptops.html" id="prod-laptops-link">Laptops</a></p></li>
-						<li><img src="../Exercise1/images/categories/desktop.png" class="category-list" alt="desktop"><p class="product-header-text">Desktops</p></li>
-						<li><img src="../Exercise1/images/categories/peripherals.png" class="category-list" alt="peripherals"><p class="product-header-text">Περιφερειακά</p></li>
-						<li><img src="../Exercise1/images/categories/network-devices.png" class="category-list" alt="network devices"><p class="product-header-text">Δικτυακά</p></li>
-					</ul>
+        <main id="main-container">
+            <div class="shadow" id="main-content">
+                <nav id="product-categories">
+                    <ul class="product-category-container no-bull">
+                        <li class="category-header"><h2><span class="material-icons material-symbols-outlined">smartphone</span>&nbsp;Τηλεφωνία
+                        </h2></li>
+                        <li><img alt="phone" class="category-list" src="../Exercise1/images/categories/phone.png">
+                            <p class="product-header-text"><a href="products-phones.html" id="prod-phones-link">Κινητά
+                                Τηλέφωνα</a></p></li>
+                        <li><img alt="case" class="category-list" src="../Exercise1/images/categories/case.png">
+                            <p class="product-header-text">Θήκες</p></li>
+                        <li>
+                            <picture>
+                                <source media="(max-width:576px)" srcset="images/phone/categories/charger.png">
+                                <source media="(max-width:768px)" srcset="images/tablet/categories/charger.png">
+                                <img alt="charger" class="category-list" src="../Exercise1/images/categories/charger.png">
+                            </picture>
+                            <p class="product-header-text">Φορτιστές</p></li>
+                        <li><img alt="power bank" class="category-list"
+                                 src="../Exercise1/images/categories/power-bank.png">
+                            <p class="product-header-text">Power Banks</p></li>
+                    </ul>
 
-					<ul class="product-category-container no-bull">
-						<li class="category-header"><h2><span class="material-icons material-symbols-outlined">videocam</span>&nbsp;Εικόνα</h2></li>
-						<li><img src="../Exercise1/images/categories/tv.png" class="category-list" alt="television"><p class="product-header-text">Τηλεοράσεις</p></li>
-						<li><img src="../Exercise1/images/categories/multimedia-device.png" class="category-list" alt="multimedia-device"><p class="product-header-text">Συσκευές multimedia</p></li>
-						<li><img src="../Exercise1/images/categories/projector.png" class="category-list" alt="projector"><p class="product-header-text">Projectors</p></li>
-						<li><img src="../Exercise1/images/categories/hdmi.png" class="category-list" alt="television cables"><p class="product-header-text">Καλώδια εικόνας</p></li>
-					</ul>
+                    <ul class="product-category-container no-bull">
+                        <li class="category-header"><h2><span
+                                class="material-icons material-symbols-outlined"> computer </span>&nbsp;Υπολογιστές</h2>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(max-width:576px)" srcset="images/phone/categories/laptop.png">
+                                <source media="(max-width:768px)" srcset="images/tablet/categories/laptop.png">
+                                <img alt="laptoplaptop" class="category-list" src="../Exercise1/images/categories/laptop.png">
+                            </picture>
+                            <p class="product-header-text"><a href="products-laptops.html" id="prod-laptops-link">Laptops</a>
+                            </p></li>
+                        <li>
+                            <picture>
+                                <source media="(max-width:576px)" srcset="images/phone/categories/desktop.png">
+                                <source media="(max-width:768px)" srcset="images/tablet/categories/desktop.png">
+                                <img alt="desktop" class="category-list" src="../Exercise1/images/categories/desktop.png">
+                            </picture>
+                            <p class="product-header-text">Desktops</p></li>
+                        <li><img alt="peripherals" class="category-list"
+                                 src="../Exercise1/images/categories/peripherals.png">
+                            <p class="product-header-text">Περιφερειακά</p></li>
+                        <li><img alt="network devices" class="category-list"
+                                 src="../Exercise1/images/categories/network-devices.png">
+                            <p class="product-header-text">Δικτυακά</p></li>
+                    </ul>
 
-					<ul class="product-category-container no-bull">
-						<li class="category-header" ><h2><span class="material-icons material-symbols-outlined">
+                    <ul class="product-category-container no-bull">
+                        <li class="category-header"><h2><span
+                                class="material-icons material-symbols-outlined">videocam</span>&nbsp;Εικόνα</h2></li>
+                        <li><img alt="television" class="category-list" src="../Exercise1/images/categories/tv.png">
+                            <p class="product-header-text">Τηλεοράσεις</p></li>
+                        <li><img alt="multimedia-device" class="category-list"
+                                 src="../Exercise1/images/categories/multimedia-device.png">
+                            <p class="product-header-text">Συσκευές multimedia</p></li>
+                        <li><img alt="projector" class="category-list"
+                                 src="../Exercise1/images/categories/projector.png">
+                            <p class="product-header-text">Projectors</p></li>
+                        <li><img alt="television cables" class="category-list"
+                                 src="../Exercise1/images/categories/hdmi.png">
+                            <p class="product-header-text">Καλώδια εικόνας</p></li>
+                    </ul>
+
+                    <ul class="product-category-container no-bull">
+                        <li class="category-header"><h2><span class="material-icons material-symbols-outlined">
 									music_note
 									</span>&nbsp;Ήχος</h2>
-						</li>
-						<li><img src="../Exercise1/images/categories/speaker.png" class="category-list" alt="speakers"><p class="product-header-text">Ηχεία</p></li>
-						<li><img src="../Exercise1/images/categories/headphones.png" class="category-list" alt="headphones"><p class="product-header-text">Ακουστικά</p></li>
-						<li><img src="../Exercise1/images/categories/enisxites.png" class="category-list" alt="enisxytes"><p class="product-header-text">Ενισχυτές</p></li>
-						<li><img src="../Exercise1/images/categories/home-cinema.png" class="category-list" alt="home cinema"><p class="product-header-text">Home Cinema</p></li>
-					</ul>
-				</nav>
-			</div>
-		</main>
+                        </li>
+                        <li><img alt="speakers" class="category-list" src="../Exercise1/images/categories/speaker.png">
+                            <p class="product-header-text">Ηχεία</p></li>
+                        <li><img alt="headphones" class="category-list"
+                                 src="../Exercise1/images/categories/headphones.png">
+                            <p class="product-header-text">Ακουστικά</p></li>
+                        <li>
+                            <picture>
+                                <source media="(max-width:576px)" srcset="images/phone/categories/enisxites.png">
+                                <source media="(max-width:768px)" srcset="images/tablet/categories/enisxites.png">
+                                <img alt="enisxites" class="category-list" src="../Exercise1/images/categories/enisxites.png">
+                            </picture>
+                            <p class="product-header-text">Ενισχυτές</p></li>
+                        <li><img alt="home cinema" class="category-list"
+                                 src="../Exercise1/images/categories/home-cinema.png">
+                            <p class="product-header-text">Home Cinema</p></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
 
-
-		<footer id="footer">
-			2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
-			<br><br>
-			<nav>
+        <footer id="footer">
+            2022 Η-ΨΙΛΙΚΑΤΖΗΔΙΚΟ
+            <br><br>
+            <nav>
 				<span class="material-symbols-outlined">
 				call
-				</span> 
-				210 1234567 &nbsp;
-				<a href="https://www.youtube.com/"><img src="../Exercise1/images/icons/youtube.png" class="icon" alt="youtube logo"> Youtube &nbsp;</a>
-				<a href="https://www.facebook.com/"><img src="../Exercise1/images/icons/facebook.ico" class="icon" alt="facebook logo"> Facebook &nbsp;</a>
-				<a href="https://www.instagram.com/"><img src="../Exercise1/images/icons/instagram.png" class="icon" alt="instagram logo"> Instagram &nbsp;</a>
-			</nav>
-			<div id="opening-hours">
+				</span>
+                210 1234567 &nbsp;
+                <a href="https://www.youtube.com/"><img alt="youtube logo" class="icon"
+                                                        src="../Exercise1/images/icons/youtube.png"> Youtube &nbsp;</a>
+                <a href="https://www.facebook.com/"><img alt="facebook logo" class="icon"
+                                                         src="../Exercise1/images/icons/facebook.ico"> Facebook &nbsp;</a>
+                <a href="https://www.instagram.com/"><img alt="instagram logo" class="icon"
+                                                          src="../Exercise1/images/icons/instagram.png"> Instagram &nbsp;</a>
+            </nav>
+            <div id="opening-hours">
 				 <span class="material-symbols-outlined">
 					nest_clock_farsight_analog
 				</span>
-				Ωράριο λειτουργίας: &nbsp; <br>
-				<ul class="to-inline-block no-bull">
-					<li>ΔΕΥ: 09:00 - 17:00</li>
-					<li>ΤΡΙ: 09:00 - 21:00</li>
-					<li>ΤΕΡ: 09:00 - 17:00</li>
-				</ul>
-				<ul class="to-inline-block no-bull">
-					<li>ΠΕΜ: 09:00 - 21:00</li>
-					<li>ΠΑΡ: 09:00 - 21:00</li>
-					<li>ΣΑΒ: 09:00 - 15:00</li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+                Ωράριο λειτουργίας: &nbsp; <br>
+                <ul class="to-inline-block no-bull">
+                    <li>ΔΕΥ: 09:00 - 17:00</li>
+                    <li>ΤΡΙ: 09:00 - 21:00</li>
+                    <li>ΤΕΡ: 09:00 - 17:00</li>
+                </ul>
+                <ul class="to-inline-block no-bull">
+                    <li>ΠΕΜ: 09:00 - 21:00</li>
+                    <li>ΠΑΡ: 09:00 - 21:00</li>
+                    <li>ΣΑΒ: 09:00 - 15:00</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
