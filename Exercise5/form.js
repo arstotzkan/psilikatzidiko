@@ -62,6 +62,18 @@ cust_birthday.addEventListener('blur', () => {
     cust_birthday.checkValidity();
 });
 
+//Rule to validate card number
+cust_card_number.addEventListener('change', () => {
+    let regex = new RegExp('^[0-9]{14,16}$');
+    if(!regex.test(cust_card_number.value)){
+        cust_card_number.setCustomValidity('Ο αριθμός της κάρτας είναι 14-16 ψηφία χωρίς κενά ή παύλες μεταξύ τους \nπ.χ. 1234567890123456');
+    }
+    else {
+        cust_card_number.setCustomValidity('');
+    }
+    cust_card_number.checkValidity();
+});
+
 //Rule to validate that the card has not expired
 cust_card_exp_date.addEventListener('change', () => {
     let regex = new RegExp('^(0[1-9]|1[0-2])\\/([0-9]{2})$');
@@ -76,6 +88,18 @@ cust_card_exp_date.addEventListener('change', () => {
         cust_card_exp_date.setCustomValidity('');
     }
     cust_card_exp_date.checkValidity();
+});
+
+//Rule to validate card CVV
+cust_card_cvv.addEventListener('change', () => {
+    let regex = new RegExp('^[0-9]{3,4}$');
+    if(!regex.test(cust_card_cvv.value)){
+        cust_card_cvv.setCustomValidity('Ο αριθμός CVV της κάρτας είναι 3-4 ψηφία π.χ. 123 ή 4567');
+    }
+    else {
+        cust_card_cvv.setCustomValidity('');
+    }
+    cust_card_cvv.checkValidity();
 });
 
 //Rule for strong passwords
@@ -108,9 +132,9 @@ errorMessage(cust_address, "Προσοχή στα κενά πριν και με�
 errorMessage(cust_ship_address, "Προσοχή στα κενά πριν και μετά το ',' \nπ.χ. το 'Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121' είναι σωστό, \nενώ το 'Κωνσταντινουπόλεως 17 , Νέα Σμύρνη, Αθήνα  ,17121' είναι λάθος.");
 errorMessage(cust_ll_phone, "Το σταθερό τηλέφωνο πρέπει να ξεκινάει με 2, μετά ακολουθεί ένα ψηφίο από το 1 έως το 8 και να έχει 10 ψηφία στο σύνολο π.χ. 2101234567");
 errorMessage(cust_cellphone, "Το κινητό τηλέφωνο πρέπει να ξεκινάει με 69 και να έχει 10 ψηφία στο σύνολο π.χ. 6912345678");
-errorMessage(cust_card_number, "Ο αριθμός της κάρτας είναι 14-16 ψηφία χωρίς κενά ή παύλες μεταξύ τους \nπ.χ. 1234567890123456");
 errorMessage(cust_card_name, "Το ονοματεπώνυμο κατόχου πρέπει να γραφτεί με κεφαλαίους λατινικούς χαρακτήρες όπως αναγράφεται στη κάρτα \nπ.χ. 'KOSTAS PAPADOPOULOS' ή 'KOSTAS M. PAPADOPOULOS' ή 'K. PAPADOPOULOS'");
-errorMessage(cust_card_cvv, "Ο αριθμός CVV της κάρτας είναι 3-4 ψηφία π.χ. 123 ή 4567");
+// errorMessage(cust_card_number, "Ο αριθμός της κάρτας είναι 14-16 ψηφία χωρίς κενά ή παύλες μεταξύ τους \nπ.χ. 1234567890123456");
+// errorMessage(cust_card_cvv, "Ο αριθμός CVV της κάρτας είναι 3-4 ψηφία π.χ. 123 ή 4567");
 
 
 /**
