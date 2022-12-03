@@ -20,7 +20,7 @@ textarea {
     /*Form takes twice as much space as the images*/
     flex: 2;
     width: 80%;
-    margin: 0;
+    margin: 1rem 0 1rem 0;
 }
 
 /* // Large devices (desktops, 992px and down) */
