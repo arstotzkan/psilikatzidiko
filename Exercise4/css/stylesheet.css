@@ -30,7 +30,7 @@ body {
 
 header {
     /*Specifies header's height*/
-    height: 2rem;
+    height: 3rem;
 }
 
 
@@ -119,8 +119,8 @@ form {
     /*Text color and alignment. Border, width and space around inside form. Space left outside the form*/
     text-align: left;
     border: 2px solid #6f0b9d;
-    width: 30rem;
     padding: 1rem;
+    width: 80%;
 }
 
 fieldset {
@@ -508,6 +508,10 @@ aside {
 
 .hide {
     visibility: hidden;
+}
+
+.display-none{
+    display: none;
 }
 
 /* // Large devices (desktops, 992px and down) */

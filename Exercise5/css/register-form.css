@@ -1,0 +1,28 @@
+form{
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    color: #fff;
+    background-color: #340055;
+    font-weight: 500;
+    border: 0;
+    height: 2rem;
+    font-size: 1.2em;
+}
+
+#error-area{
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: .25rem;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+}
+
+#button-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

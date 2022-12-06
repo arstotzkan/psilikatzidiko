@@ -112,6 +112,9 @@ cust_pass.addEventListener('input', () => {
         cust_pass.setCustomValidity('');
     }
     cust_pass.checkValidity();
+
+    let event = new Event('input')
+    cust_pass_repeat.dispatchEvent(event)
 });
 
 //Rule for matching passwords
@@ -128,7 +131,7 @@ cust_pass_repeat.addEventListener('input', () => {
 //Show custom error messages
 errorMessage(cust_name, "Γράψτε Όνομα Επώνυμο π.χ. 'Μάριος Δημητριάδης'");
 errorMessage(cust_email, "π.χ. psilikatzidiko@gmail.com");
-errorMessage(cust_address, "Προσοχή στα κενά πριν και μετά το ',' \nπ.χ. το 'Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121' είναι σωστό, \nενώ το 'Κωνσταντινουπόλεως 17 , Νέα Σμύρνη, Αθήνα  ,17121' είναι λάθος.");
+errorMessage(cust_address, "Λάθος διεύθυνση");
 errorMessage(cust_ship_address, "Προσοχή στα κενά πριν και μετά το ',' \nπ.χ. το 'Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121' είναι σωστό, \nενώ το 'Κωνσταντινουπόλεως 17 , Νέα Σμύρνη, Αθήνα  ,17121' είναι λάθος.");
 errorMessage(cust_ll_phone, "Το σταθερό τηλέφωνο πρέπει να ξεκινάει με 2, μετά ακολουθεί ένα ψηφίο από το 1 έως το 8 και να έχει 10 ψηφία στο σύνολο π.χ. 2101234567");
 errorMessage(cust_cellphone, "Το κινητό τηλέφωνο πρέπει να ξεκινάει με 69 και να έχει 10 ψηφία στο σύνολο π.χ. 6912345678");

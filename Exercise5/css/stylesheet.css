@@ -153,15 +153,11 @@ input:required + span::before{
     color: red;
 }
 
-input:required:invalid{
+input:required:user-invalid{
     border: 2px solid #ce3838;
     background-color: #d58787;
 }
 
-input:required:valid{
-    border: 2px solid #38b90e;
-    background-color: #a0c28e;
-}
 
 input:required:placeholder-shown{
     background-color: white;
@@ -182,6 +178,10 @@ input[type=number] {
 }
 
 .hide {
+    display: none;
+}
+
+.display-none{
     display: none;
 }
 
