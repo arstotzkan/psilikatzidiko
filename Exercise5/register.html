@@ -109,7 +109,7 @@
                             <legend>Username & Password</legend>
                             
                             <div class="flex-column-container py-1">
-                                <label for="customer-email">Email: </label>
+                                <label for="customer-email">Email: *</label>
                                 <input autocomplete="email" id="customer-email" name="customer-email"
                                     pattern="[a-z0-9]{1,30}@[a-z0-9]{1,20}.([a-z]{2}|[a-z]{3})"
                                     placeholder="someone@example.com"
@@ -117,20 +117,20 @@
                             </div>    
 
                             <div class="flex-column-container py-1"> 
-                                <label for="customer-username">Όνομα χρήστη: </label>
+                                <label for="customer-username">Όνομα χρήστη: *</label>
                                 <input autocomplete="name" id="customer-username" name="customer-username"
                                         pattern="^[A-Za-z0-9]{7,20}$"
                                         required type="text">
                             </div>    
 
                             <div class="flex-column-container py-1"> 
-                                <label for="customer-password">Κωδικός: </label>
+                                <label for="customer-password">Κωδικός: *</label>
                                 <input autocomplete="new-password" id="customer-password" name="customer-password" required
                                         type="password">
                             </div>    
 
                             <div class="flex-column-container py-1"> 
-                                <label for="customer-password-repeat">Επανάληψη κωδικού: </label>
+                                <label for="customer-password-repeat">Επανάληψη κωδικού: *</label>
                                 <input autocomplete="new-password" id="customer-password-repeat"
                                         name="customer-password-repeat"
                                         required type="password">
@@ -142,14 +142,14 @@
                             <legend>Προσωπικά Στοιχεία</legend>
                             
                             <div class="flex-column-container py-1">
-                                <label for="customer-name">Ονοματεπώνυμο: </label>
+                                <label for="customer-name">Ονοματεπώνυμο: *</label>
                                 <input autocomplete="name" id="customer-name" minlength="6" name="customer-name"
                                     pattern="^[\u0386-\u03ce ]{3,30}$" placeholder="Κωνσταντίνος Παπαδόπουλος"
                                     required type="text">
                             </div>
 
                             <div class="flex-column-container py-1">
-                                <label for="customer-address">Διεύθυνση Κατοικίας: </label>
+                                <label for="customer-address">Διεύθυνση Κατοικίας: *</label>
                                 <input id="customer-address" name="customer-address"
                                     pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}"
                                     placeholder="Κωνσταντινουπόλεως 17"
@@ -158,7 +158,7 @@
                             </div>    
 
                             <div class="flex-column-container py-1">
-                                <label for="city">Πόλη Κατοικίας: </label>
+                                <label for="city">Πόλη Κατοικίας: *</label>
                                 <input id="city" name="city"
                                     pattern="[\u0386-\u03ce ]{3,}"
                                     placeholder="Νέα Σμύρνη"
@@ -167,20 +167,20 @@
                             </div>    
 
                             <div class="flex-column-container py-1">
-                                <label for="customer-birthday">Ημερομηνία Γέννησης: </label>
+                                <label for="customer-birthday">Ημερομηνία Γέννησης: *</label>
                                 <input autocomplete="bday" id="customer-birthday" min="1922-01-01" name="customer-birthday"
                                     placeholder="10/05/1995" required type="date">
                             </div> 
 
                             <div class="flex-column-container py-1">
-                                <label for="customer-land-line-phone">Σταθερό: </label>
+                                <label for="customer-land-line-phone">Σταθερό:</label>
                                 <input id="customer-land-line-phone" name="customer-land-line-phone"
                                     pattern="2[1-8]{1}[0-9]{8}"
                                     placeholder="2101234567" type="tel">
                             </div>  
                             
                             <div class="flex-column-container py-1">
-                                <label for="customer-cellphone">Κινητό: </label>
+                                <label for="customer-cellphone">Κινητό: *</label>
                                 <input id="customer-cellphone" name="customer-cellphone" pattern="69[0-9]{8}"
                                     placeholder="6912345678"
                                     required type="tel">

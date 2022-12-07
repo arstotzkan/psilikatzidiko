@@ -51,7 +51,7 @@ function go_to_next_subform(){
 }
 
 function subform_is_valid(subform){
-    let inputs = subform.querySelectorAll("input");
+    let inputs = subform.querySelectorAll("[required]");
     let is_valid = true;
 
     for (let input of inputs){
