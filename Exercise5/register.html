@@ -101,280 +101,389 @@
                     <!-- TODO make it look nice with css -->                    
                     <section>
                     <h1>Εγγραφή χρήστη</h1>
-                    <h3 id="counter">1 of 8</h6>
+                    <h3 id="counter">1 of 7</h6>
                     </section>
 
-                    <div id="introduction" class="displayed">
-                        Γειά σας!<!-- Introduction  -->
-                    </div>
+                    <div id="main-form">
+                        <fieldset id="account-data" class="displayed">
+                            <legend>Username & Password</legend>
+                            
+                            <div class="flex-column-container py-1">
+                                <label for="customer-email">Email: </label>
+                                <input autocomplete="email" id="customer-email" name="customer-email"
+                                    pattern="[a-z0-9]{1,30}@[a-z0-9]{1,20}.([a-z]{2}|[a-z]{3})"
+                                    placeholder="someone@example.com"
+                                    required type="email">
+                            </div>    
 
-                    <fieldset id="account-data" class="display-none">
-                        <legend>Username & Password</legend>
-                        
-                        <div>
-                        
-                            <label for="customer-email">Email: </label>
-                            <input autocomplete="email" id="customer-email" name="customer-email"
-                                pattern="[a-z0-9]{1,30}@[a-z0-9]{1,20}.([a-z]{2}|[a-z]{3})"
-                                placeholder="someone@example.com"
-                                required type="email">
-                        </div>    
+                            <div class="flex-column-container py-1"> 
+                                <label for="customer-username">Όνομα χρήστη: </label>
+                                <input autocomplete="name" id="customer-username" name="customer-username"
+                                        pattern="^[A-Za-z0-9]{7,20}$"
+                                        required type="text">
+                            </div>    
 
-                        <label for="customer-username">Όνομα χρήστη: </label>
-                        <input autocomplete="name" id="customer-username" name="customer-username"
-                                pattern="^[A-Za-z0-9]{7,20}$"
-                                required type="text">
-                        
-                        <label for="customer-password">Κωδικός: </label>
-                        <input autocomplete="new-password" id="customer-password" name="customer-password" required
-                                type="password">
-                        
-                        <label for="customer-password-repeat">Επανάληψη κωδικού: </label>
-                        <input autocomplete="new-password" id="customer-password-repeat"
-                                name="customer-password-repeat"
-                                required type="password">
-                    </fieldset>
+                            <div class="flex-column-container py-1"> 
+                                <label for="customer-password">Κωδικός: </label>
+                                <input autocomplete="new-password" id="customer-password" name="customer-password" required
+                                        type="password">
+                            </div>    
 
-                    <fieldset id="personal-data" class="display-none">
-                        <legend>Προσωπικά Στοιχεία</legend>
+                            <div class="flex-column-container py-1"> 
+                                <label for="customer-password-repeat">Επανάληψη κωδικού: </label>
+                                <input autocomplete="new-password" id="customer-password-repeat"
+                                        name="customer-password-repeat"
+                                        required type="password">
+                            </div>    
+                                
+                        </fieldset>
+
+                        <fieldset id="personal-data" class="display-none">
+                            <legend>Προσωπικά Στοιχεία</legend>
+                            
+                            <div class="flex-column-container py-1">
+                                <label for="customer-name">Ονοματεπώνυμο: </label>
+                                <input autocomplete="name" id="customer-name" minlength="6" name="customer-name"
+                                    pattern="^[\u0386-\u03ce ]{3,30}$" placeholder="Κωνσταντίνος Παπαδόπουλος"
+                                    required type="text">
+                            </div>
+
+                            <div class="flex-column-container py-1">
+                                <label for="customer-address">Διεύθυνση Κατοικίας: </label>
+                                <input id="customer-address" name="customer-address"
+                                    pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}"
+                                    placeholder="Κωνσταντινουπόλεως 17"
+                                    required
+                                    type="text">
+                            </div>    
+
+                            <div class="flex-column-container py-1">
+                                <label for="city">Πόλη Κατοικίας: </label>
+                                <input id="city" name="city"
+                                    pattern="[\u0386-\u03ce ]{3,}"
+                                    placeholder="Νέα Σμύρνη"
+                                    required
+                                    type="text">
+                            </div>    
+
+                            <div class="flex-column-container py-1">
+                                <label for="customer-birthday">Ημερομηνία Γέννησης: </label>
+                                <input autocomplete="bday" id="customer-birthday" min="1922-01-01" name="customer-birthday"
+                                    placeholder="10/05/1995" required type="date">
+                            </div> 
+
+                            <div class="flex-column-container py-1">
+                                <label for="customer-land-line-phone">Σταθερό: </label>
+                                <input id="customer-land-line-phone" name="customer-land-line-phone"
+                                    pattern="2[1-8]{1}[0-9]{8}"
+                                    placeholder="2101234567" type="tel">
+                            </div>  
+                            
+                            <div class="flex-column-container py-1">
+                                <label for="customer-cellphone">Κινητό: </label>
+                                <input id="customer-cellphone" name="customer-cellphone" pattern="69[0-9]{8}"
+                                    placeholder="6912345678"
+                                    required type="tel">
+                            </div>
+                        </fieldset>
                         
-                        <div>
-                            <label for="customer-name">Ονοματεπώνυμο: </label>
-                            <input autocomplete="name" id="customer-name" minlength="6" name="customer-name"
-                                pattern="^[\u0386-\u03ce ]{3,30}$" placeholder="Κωνσταντίνος Παπαδόπουλος"
-                                required type="text">
+                        <fieldset id="payment-data" class="display-none">
+                            <legend>Στοιχεία Πληρωμής και Αποστολής Προϊόντων</legend>
+                            <b>Τρόπος Πληρωμής:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100">
+                                <div class="flex-column-container py-1">
+                                    <label for="counter-payment" class="text-center">Αντικαταβολή</label>
+                                    <input id="counter-payment" name="customer-pay-method" type="checkbox"
+                                            value="counter-payment">
+                                </div>
+
+                                <div class="flex-column-container py-1">
+                                    <label for="debit-credit-card" class="text-center">Χρεωστική/Πιστωτική Κάρτα</label>
+                                    <input id="debit-credit-card" name="customer-pay-method" type="checkbox"
+                                            value="debit-credit-card">
+                                </div>
+                                
+                                <div class="flex-column-container py-1">
+                                    <label for="paypal" class="text-center">Paypal</label>
+                                    <input id="paypal" name="customer-pay-method" type="checkbox" value="paypal">
+                                </div>
+                                
+                            </div>
+
+                            <details class="hide" id="customer-card">
+                                <div class="flex-container w-100 py-1">                         
+                                    <summary>Χρεωστική/Πιστωτική Κάρτα</summary>
+                                    <label for="customer-card-number">Αριθμός Κάρτας: </label>
+                                    <input autocomplete="cc-number" id="customer-card-number" name="customer-card-number"
+                                            pattern="[0-9]{14,16}" placeholder="1234567890123456" type="tel">
+                                </div>
+
+                                <div class="flex-container w-100 py-1">                         
+                                    <label for="customer-card-name">Ονοματεπώνυμο κατόχου: </label>
+                                    <input autocomplete="cc-name" id="customer-card-name" name="customer-card-name"
+                                            pattern="^[A-Z. ]{3,30}$" type="text">
+                                </div>
+                                
+                                <div class="flex-container w-100 py-1">   
+                                    <label for="customer-card-exp-date">Ημερομηνία Λήξης: </label>
+                                    <input autocomplete="cc-exp" id="customer-card-exp-date" maxlength="5"
+                                            name="customer-card-exp-date" placeholder="MM/YY" type="text">
+                                </div>
+                        
+                                <div class="flex-container w-100 py-1">       
+                                    <label for="customer-card-cvv">CVV: </label>
+                                    <input autocomplete="cc-csc" id="customer-card-cvv" name="customer-card-cvv"
+                                            pattern="[0-9]{3,4}"
+                                            placeholder="123" type="number">
+                                </div>
+                            </details>
+                            
+                            <details class="hide py-1" id="customer-paypal">
+                                <summary>Paypal</summary>
+                                <label for="customer-paypal-id">Paypal ID: </label>
+                                <input id="customer-paypal-id" name="customer-paypal-id" pattern="^[a-zA-Z0-9]*$"
+                                        type="text">
+                            </details>
+                            
+                            <details class="py-1">
+                                <summary>Διεύθυνση Αποστολής(αν διαφέρει από τη διεύθυνση κατοικίας)</summary>
+                                <label for="customer-shipping-address">Διεύθυνση Αποστολής: </label>
+                                <input id="customer-shipping-address" name="customer-shipping-address"
+                                        pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}, [\u0386-\u03ce ]{3,}, [\u0386-\u03ce ]{3,}, [0-9]{5}$"
+                                        placeholder="Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121"
+                                        type="text">
+                            </details>
+                        </fieldset>
+                        
+                        <fieldset id="communication-data" class="display-none">
+                            <legend>Τρόποι επικοινωνίας για ενημέρωση παραγγελιών και προσφορών</legend>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">                         
+                                    <label for="sms" class="text-center">SMS</label>
+                                    <input id="sms" name="customer-communication" type="checkbox" value="sms">
+                                </div>
+
+                                <div class="flex-column-container">                         
+                                    <label for="email" class="text-center">Email</label>
+                                    <input id="email" name="customer-communication" type="checkbox" value="email">
+                                </div>
+
+                                <div class="flex-column-container">                         
+                                    <label for="viber" class="text-center">Viber</label>
+                                    <input id="viber" name="customer-communication" type="checkbox" value="viber">
+                                </div>
+
+                                <div class="flex-column-container">                         
+                                    <label for="whats-app" class="text-center">WhatsApp</label>
+                                    <input id="whats-app" name="customer-communication" type="checkbox" value="whats-app">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <div id="extra-data" class="display-none">
+                            <p>Ακολουθεί ένα σύντομο ερωτηματολόγιο όπου μπορείτε να συμπληρώσετε αν το επιθυμείτε.</p>
+                            <button type="submit">Skip</button>
                         </div>
 
-                        <div>
-                            <label for="customer-address">Διεύθυνση Κατοικίας: </label>
-                            <input id="customer-address" name="customer-address"
-                                pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}"
-                                placeholder="Κωνσταντινουπόλεως 17"
-                                required
-                                type="text">
-                        </div>    
+                        <fieldset id="extra-personal-data" class="display-none">
+                            <legend>Σύντομο ερωτηματολόγιο</legend>
 
-                        <div>
-                            <label for="city">Πόλη Κατοικίας: </label>
-                            <input id="city" name="city"
-                                pattern="[\u0386-\u03ce ]{3,}"
-                                placeholder="Νέα Σμύρνη"
-                                required
-                                type="text">
-                        </div>    
+                            <b>Φύλο:</b>
+                            <div class="flex-container justify-content-start align-items-start w-100 py-1">
+                                <div class="flex-column-container">                         
+                                    <label for="man" class="text-center">Άνδρας</label>
+                                    <input id="man" name="gender" type="radio" value="man">
+                                </div>
+                                
+                                <div class="flex-column-container">                         
+                                    <label for="woman" class="text-center">Γυναίκα</label>
+                                    <input id="woman" name="gender" type="radio" value="woman">
+                                </div>
 
-                        <div>
-                            <label for="customer-birthday">Ημερομηνία Γέννησης: </label>
-                            <input autocomplete="bday" id="customer-birthday" min="1922-01-01" name="customer-birthday"
-                                placeholder="10/05/1995" required type="date">
-                        </div>   
-                        <div>
-                            <label for="customer-land-line-phone">Σταθερό: </label>
-                            <input id="customer-land-line-phone" name="customer-land-line-phone"
-                                pattern="2[1-8]{1}[0-9]{8}"
-                                placeholder="2101234567" type="tel">
-                        </div>   
-                        <div>
-                            <label for="customer-cellphone">Κινητό: </label>
-                            <input id="customer-cellphone" name="customer-cellphone" pattern="69[0-9]{8}"
-                                placeholder="6912345678"
-                                required type="tel">
-                        </div>
-                    </fieldset>
-                    
-                    <fieldset id="payment-data" class="display-none">
-                        <legend>Στοιχεία Πληρωμής και Αποστολής Προϊόντων</legend>
-                        
-                        <label for="counter-payment">Αντικαταβολή</label>
-                        <input id="counter-payment" name="customer-pay-method" type="checkbox"
-                                value="counter-payment">
-                        
-                        <label for="debit-credit-card">Χρεωστική/Πιστωτική Κάρτα</label>
-                        <input id="debit-credit-card" name="customer-pay-method" type="checkbox"
-                                value="debit-credit-card">
-                        
-                        <label for="paypal">Paypal</label>
-                        <input id="paypal" name="customer-pay-method" type="checkbox" value="paypal">
-                        
-                        <details class="hide" id="customer-card">
-                            <summary>Χρεωστική/Πιστωτική Κάρτα</summary>
-                            <label for="customer-card-number">Αριθμός Κάρτας: </label>
-                            <input autocomplete="cc-number" id="customer-card-number" name="customer-card-number"
-                                    pattern="[0-9]{14,16}" placeholder="1234567890123456" type="tel">
+                                <div class="flex-column-container">                         
+                                    <label for="gender-other-check" class="text-center">Άλλο</label>
+                                    <input id="gender-other-check" name="gender" type="radio" value="gender-other-check">
+                                </div>
+
+                                <div class="flex-column-container display-none">
+                                    <label for="gender-other-input" class="text-center">Γράψτε εδώ</label>
+                                    <input id="gender-other-input" name="gender-other" type="text">
+                                </div>
+                            </div>
+                            <!-- TODO at least one more field with datalist -->
+                            <b>Χώρα καταγωγής:</b>
+                            <div class="flex-column-container justify-content-center align-items-center w-100 py-1">
+                                <label for="country-origin">Επιλέξτε χώρα:</label>
+                                <select id="country-origin" list="country-list" name="country-origin">
+                                    <option value="Ελλάδα">
+                                    <option value="Κύπρος">
+                                    <option value="Ευρωπαϊκή Ένωση">
+                                    <option value="Εκτός ΕΕ">
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="buying-habits" class="display-none">
+                            <b>Πόσο συχνά αγοράζετε από ηλεκτρονικά καταστήματα:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">                         
+                                    <label for="vey-often-bo" class="text-center">Πολύ συχνά</label>
+                                    <input id="vey-often-bo" name="buy-online" type="radio" value="vey-often">
+                                </div>
+                                
+                                <div class="flex-column-container">                         
+                                    <label for="often-bo" class="text-center">Συχνά</label>
+                                    <input id="often-bo" name="buy-online" type="radio" value="often">
+                                </div>
+                                
+                                <div class="flex-column-container">   
+                                    <label for="neither-frequent-nor-rare-bo" class="text-center">Ούτε συχνά-Ούτε σπάνια</label>
+                                    <input id="neither-frequent-nor-rare-bo" name="buy-online" type="radio"
+                                            value="neither-frequent-nor-rare">
+                                </div>
                             
-                            <label for="customer-card-name">Ονοματεπώνυμο κατόχου: </label>
-                            <input autocomplete="cc-name" id="customer-card-name" name="customer-card-name"
-                                    pattern="^[A-Z. ]{3,30}$" type="text">
-                            
-                            <label for="customer-card-exp-date">Ημερομηνία Λήξης: </label>
-                            <input autocomplete="cc-exp" id="customer-card-exp-date" maxlength="5"
-                                    name="customer-card-exp-date" placeholder="MM/YY" type="text">
-                            
-                            <label for="customer-card-cvv">CVV: </label>
-                            <input autocomplete="cc-csc" id="customer-card-cvv" name="customer-card-cvv"
-                                    pattern="[0-9]{3,4}"
-                                    placeholder="123" type="number">
-                        </details>
-                        
-                        <details class="hide" id="customer-paypal">
-                            <summary>Paypal</summary>
-                            <label for="customer-paypal-id">Paypal ID: </label>
-                            <input id="customer-paypal-id" name="customer-paypal-id" pattern="^[a-zA-Z0-9]*$"
-                                    type="text">
-                        </details>
-                        
-                        <details>
-                            <summary>Διεύθυνση Αποστολής(αν διαφέρει από τη διεύθυνση κατοικίας)</summary>
-                            <label for="customer-shipping-address">Διεύθυνση Αποστολής: </label>
-                            <input id="customer-shipping-address" name="customer-shipping-address"
-                                    pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}, [\u0386-\u03ce ]{3,}, [\u0386-\u03ce ]{3,}, [0-9]{5}$"
-                                    placeholder="Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121"
-                                    type="text">
-                        </details>
-                    </fieldset>
-                    
-                    <fieldset id="communication-data" class="display-none">
-                        <legend>Τρόποι επικοινωνίας για ενημέρωση παραγγελιών και προσφορών</legend>
-                        
-                        <label for="sms">SMS</label>
-                        <input id="sms" name="customer-communication" type="checkbox" value="sms">
-                        
-                        <label for="email">Email</label>
-                        <input id="email" name="customer-communication" type="checkbox" value="email">
-                        
-                        <label for="viber">Viber</label>
-                        <input id="viber" name="customer-communication" type="checkbox" value="viber">
-                        
-                        <label for="whats-app">WhatsApp</label>
-                        <input id="whats-app" name="customer-communication" type="checkbox" value="whats-app">
-                    </fieldset>
-                    
-                    <div id="extra-data" class="display-none">
-                        <p>Ακολουθεί ένα σύντομο ερωτηματολόγιο όπου μπορείτε να συμπληρώσετε αν το επιθυμείτε.</p>
-                        <button type="submit">Skip</button>
+                                <div class="flex-column-container">   
+                                    <label for="rare-bo" class="text-center">Σπάνια</label>
+                                    <input id="rare-bo" name="buy-online" type="radio" value="rare">
+                                </div>
+                                
+                                <div class="flex-column-container">       
+                                    <label for="very-rare-bo" class="text-center">Πολύ σπάνια</label>
+                                    <input id="very-rare-bo" name="buy-online" type="radio" value="very-rare">
+                                </div>
+                                
+                            </div>
+
+                            <b>Πoιά προϊόντα αγοράζετε από ηλεκτρονικά καταστήματα:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">       
+                                    <label for="phone-bo" class="text-center">Κινητό</label>
+                                    <input id="phone-bo" name="products-bought-online" type="checkbox" value="phone">
+                                </div>
+
+                                <div class="flex-column-container">       
+                                    <label for="pc-bo" class="text-center">Υπολογιστή</label>
+                                    <input id="pc-bo" name="products-bought-online" type="checkbox" value="pc">
+                                </div>
+
+                                <div class="flex-column-container"> 
+                                    <label for="tv-bo" class="text-center">Τηλεόραση</label>
+                                    <input id="tv-bo" name="products-bought-online" type="checkbox" value="tv">
+                                </div>
+
+                                <div class="flex-column-container"> 
+                                    <label for="headphones-bo" class="text-center">Ακουστικά</label>
+                                    <input id="headphones-bo" name="products-bought-online" type="checkbox" value="headphones">
+                                </div>
+
+                                <div class="flex-column-container"> 
+                                    <label for="product-other-check-bo" class="text-center">Άλλο</label>
+                                    <input id="product-other-check-bo" name="products-bought-online" type="checkbox"
+                                            value="product-other-check">
+                                    <input class="hide" id="product-other-input-bo" name="product-other-input-bo" type="text">
+                                </div>
+                            </div>
+
+                            <b>Πόσο συχνά αγοράζετε προϊόντα σε προσφορά:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">     
+                                    <label for="vey-often-bio" class="text-center">Πολύ συχνά</label>
+                                    <input id="vey-often-bio" name="buy-on-offer" type="radio" value="vey-often">
+                                </div>
+
+                                <div class="flex-column-container">     
+                                    <label for="often-bio" class="text-center">Συχνά</label>
+                                    <input id="often-bio" name="buy-on-offer" type="radio" value="often">
+                                </div>
+
+                                <div class="flex-column-container">     
+                                    <label for="neither-frequent-nor-rare-bio" class="text-center">Ούτε συχνά-Ούτε σπάνια</label>
+                                    <input id="neither-frequent-nor-rare-bio" name="buy-on-offer" type="radio"
+                                            value="neither-frequent-nor-rare">
+                                </div>
+
+                                <div class="flex-column-container">     
+                                    <label for="rare-bio" class="text-center">Σπάνια</label>
+                                    <input id="rare-bio" name="buy-on-offer" type="radio" value="rare">
+                                </div>
+
+                                <div class="flex-column-container">     
+                                    <label for="very-rare-bio" class="text-center">Πολύ σπάνια</label>
+                                    <input id="very-rare-bio" name="buy-on-offer" type="radio" value="very-rare">
+                                </div>
+                            </div>
+
+                            <b>Ποια προϊόντα πιστεύετε ότι θα έπρεπε να έχουν προσφορά πιο συχνά:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">        
+                                <div class="flex-column-container"> 
+                                    <label for="phone-pof" class="text-center">Κινητό</label>
+                                    <input id="phone-pof" name="products-on-offer" type="checkbox" value="phone">
+                                </div>
+
+                                <div class="flex-column-container">       
+                                    <label for="pc-pof" class="text-center">Υπολογιστή</label>
+                                    <input id="pc-pof" name="products-on-offer" type="checkbox" value="pc">
+                                </div>
+
+                                <div class="flex-column-container">       
+                                    <label for="tv-pof" class="text-center">Τηλεόραση</label>
+                                    <input id="tv-pof" name="products-on-offer" type="checkbox" value="tv">
+                                </div>
+
+                                <div class="flex-column-container">       
+                                    <label for="headphones-pof" class="text-center">Ακουστικά</label>
+                                    <input id="headphones-pof" name="products-on-offer" type="checkbox" value="headphones">
+                                </div>
+
+                                <div class="flex-column-container">       
+                                    <label for="product-other-check-pof" class="text-center">Άλλο</label>
+                                    <input id="product-other-check-pof" name="products-on-offer" type="checkbox"
+                                            value="product-other-check">
+                                    <input class="hide" id="product-other-input-pof" name="product-other-input-pof" type="text">
+                                </div>
+                                
+                            </div>
+
+                            <b>Με ποιό τρόπο πληρώνετε συνήθως:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">    
+                                    <label for="card" class="text-center">Κάρτα</label>
+                                    <input id="card" name="frequent-pay-method" type="radio" value="card">
+                                </div>
+
+                                <div class="flex-column-container">    
+                                    <label for="bank-account" class="text-center">Μέσω λογαριασμού τραπέζης </label>
+                                    <input id="bank-account" name="frequent-pay-method" type="radio" value="bank-account">
+                                </div>
+
+                                <div class="flex-column-container">        
+                                    <label for="cash" class="text-center">Μετρητά</label>
+                                    <input id="cash" name="frequent-pay-method" type="radio" value="cash">
+                                </div>
+
+                                <div class="flex-column-container">        
+                                    <label for="paypal-m" class="text-center" >Paypal</label>
+                                    <input id="paypal-m" name="frequent-pay-method" type="radio" value="paypal">
+                                </div>
+                                
+                            </div>
+
+                            <b>Πώς θα θέλατε να παραλάβετε την παραγγελία σας:</b>
+                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                                <div class="flex-column-container">      
+                                    <label for="in-store" class="text-center">Παραλαβή από το κατάστημα</label>
+                                    <input id="in-store" name="shipping-method" type="checkbox" value="in-store">
+                                </div>
+
+                                <div class="flex-column-container">      
+                                    <label for="sent-to-customer" class="text-center">Αποστολή σε εσάς</label>
+                                    <input id="sent-to-customer" name="shipping-method" type="checkbox"
+                                            value="sent-to-customer">
+                                </div>        
+                            </div>
+                        </fieldset>
                     </div>
 
-                    <fieldset id="extra-personal-data" class="display-none">
-                        <legend>Σύντομο ερωτηματολόγιο</legend>
-                        
-                        <p>Φύλο:</p>
-                        <label for="man">Άνδρας</label>
-                        <input id="man" name="gender" type="radio" value="man">
-                        
-                        <label for="woman">Γυναίκα</label>
-                        <input id="woman" name="gender" type="radio" value="woman">
-                        
-                        <label for="gender-other-check">Άλλο</label>
-                        <input id="gender-other-check" name="gender" type="radio" value="gender-other-check">
-                        <input id="gender-other-input" name="gender-other" type="text">
-                        
-                        <!-- TODO at least one more field with datalist -->
-                        <p>Χώρα καταγωγής:</p>
-                        <label for="country-origin">Επιλέξτε χώρα:</label>
-                        <input id="country-origin" list="country-list" name="country-origin">
-                        <datalist id="country-list">
-                            <option value="Ελλάδα">
-                            <option value="Κύπρος">
-                            <option value="Γαλλία">
-                            <option value="Γερμανία">
-                            <option value="Ιταλία">
-                            <option value="Ισπανία">
-                        </datalist>
-                    </fieldset>
-
-                    <fieldset id="buying-habits" class="display-none">
-                        <p>Πόσο συχνά αγοράζετε από ηλεκτρονικά καταστήματα:</p>
-                        <label for="vey-often-bo">Πολύ συχνά</label>
-                        <input id="vey-often-bo" name="buy-online" type="radio" value="vey-often">
-                        
-                        <label for="often-bo">Συχνά</label>
-                        <input id="often-bo" name="buy-online" type="radio" value="often">
-                        
-                        <label for="neither-frequent-nor-rare-bo">Ούτε συχνά-Ούτε σπάνια</label>
-                        <input id="neither-frequent-nor-rare-bo" name="buy-online" type="radio"
-                                value="neither-frequent-nor-rare">
-                        
-                        <label for="rare-bo">Σπάνια</label>
-                        <input id="rare-bo" name="buy-online" type="radio" value="rare">
-                        
-                        <label for="very-rare-bo">Πολύ σπάνια</label>
-                        <input id="very-rare-bo" name="buy-online" type="radio" value="very-rare">
-                        
-                        <p>Πoιά προϊόντα αγοράζετε από ηλεκτρονικά καταστήματα:</p>
-                        <label for="phone-bo">Κινητό</label>
-                        <input id="phone-bo" name="products-bought-online" type="checkbox" value="phone">
-                        
-                        <label for="pc-bo">Υπολογιστή</label>
-                        <input id="pc-bo" name="products-bought-online" type="checkbox" value="pc">
-                        
-                        <label for="tv-bo">Τηλεόραση</label>
-                        <input id="tv-bo" name="products-bought-online" type="checkbox" value="tv">
-                        
-                        <label for="headphones-bo">Ακουστικά</label>
-                        <input id="headphones-bo" name="products-bought-online" type="checkbox" value="headphones">
-                        
-                        <label for="product-other-check-bo">Άλλο</label>
-                        <input id="product-other-check-bo" name="products-bought-online" type="checkbox"
-                                value="product-other-check">
-                        <input class="hide" id="product-other-input-bo" name="product-other-input-bo" type="text">
-                        
-                        <p>Πόσο συχνά αγοράζετε προϊόντα σε προσφορά:</p>
-                        <label for="vey-often-bio">Πολύ συχνά</label>
-                        <input id="vey-often-bio" name="buy-on-offer" type="radio" value="vey-often">
-                        
-                        <label for="often-bio">Συχνά</label>
-                        <input id="often-bio" name="buy-on-offer" type="radio" value="often">
-                        
-                        <label for="neither-frequent-nor-rare-bio">Ούτε συχνά-Ούτε σπάνια</label>
-                        <input id="neither-frequent-nor-rare-bio" name="buy-on-offer" type="radio"
-                                value="neither-frequent-nor-rare">
-                        
-                        <label for="rare-bio">Σπάνια</label>
-                        <input id="rare-bio" name="buy-on-offer" type="radio" value="rare">
-                        
-                        <label for="very-rare-bio">Πολύ σπάνια</label>
-                        <input id="very-rare-bio" name="buy-on-offer" type="radio" value="very-rare">
-                        
-                        <p>Ποια προϊόντα πιστεύετε ότι θα έπρεπε να έχουν προσφορά πιο συχνά:</p>
-                        <label for="phone-pof">Κινητό</label>
-                        <input id="phone-pof" name="products-on-offer" type="checkbox" value="phone">
-                        
-                        <label for="pc-pof">Υπολογιστή</label>
-                        <input id="pc-pof" name="products-on-offer" type="checkbox" value="pc">
-                        
-                        <label for="tv-pof">Τηλεόραση</label>
-                        <input id="tv-pof" name="products-on-offer" type="checkbox" value="tv">
-                        
-                        <label for="headphones-pof">Ακουστικά</label>
-                        <input id="headphones-pof" name="products-on-offer" type="checkbox" value="headphones">
-                        
-                        <label for="product-other-check-pof">Άλλο</label>
-                        <input id="product-other-check-pof" name="products-on-offer" type="checkbox"
-                                value="product-other-check">
-                        <input class="hide" id="product-other-input-pof" name="product-other-input-pof" type="text">
-                        
-                        <p>Με ποιό τρόπο πληρώνετε συνήθως:</p>
-                        <label for="card">Κάρτα</label>
-                        <input id="card" name="frequent-pay-method" type="radio" value="card">
-                        
-                        <label for="bank-account">Μέσω λογαριασμού τραπέζης </label>
-                        <input id="bank-account" name="frequent-pay-method" type="radio" value="bank-account">
-                        
-                        <label for="cash">Μετρητά</label>
-                        <input id="cash" name="frequent-pay-method" type="radio" value="cash">
-                        
-                        <label for="paypal-m">Paypal</label>
-                        <input id="paypal-m" name="frequent-pay-method" type="radio" value="paypal">
-                        
-                        <p>Πώς θα θέλατε να παραλάβετε την παραγγελία σας:</p>
-                        <label for="in-store">Παραλαβή από το κατάστημα</label>
-                        <input id="in-store" name="shipping-method" type="checkbox" value="in-store">
-                        
-                        <label for="sent-to-customer">Αποστολή σε εσάς</label>
-                        <input id="sent-to-customer" name="shipping-method" type="checkbox"
-                                value="sent-to-customer">
-                    </fieldset>
-                    
                     <div id="error-area" class="display-none">
                         <p>Υπάρχει πρόβλημα με τα στοιχεία:</p>
                         <ul id="error-list">

@@ -21,6 +21,12 @@ const product_offer_other = document.querySelector('#product-other-check-pof');
 const product_offer_input = document.querySelector('#product-other-input-pof');
 const cust_pass = document.querySelector('#customer-password');
 const cust_pass_repeat = document.querySelector('#customer-password-repeat');
+
+const man = document.getElementById("man");
+const woman = document.getElementById("woman");
+const other_gender = document.getElementById("gender-other-check");
+const other_gender_input = document.getElementById("gender-other-input");
+
 const date = new Date()
 
 
@@ -127,6 +133,19 @@ cust_pass_repeat.addEventListener('input', () => {
     }
     cust_pass_repeat.checkValidity();
 });
+
+
+man.addEventListener("check", function(){
+    other_gender_input.parentElement.classList.add("display-none");
+})
+
+woman.addEventListener("click", function(){
+    other_gender_input.parentElement.classList.add("display-none");
+})
+
+other_gender.addEventListener("click", function(){
+    other_gender_input.parentElement.classList.remove("display-none");
+})
 
 //Show custom error messages
 errorMessage(cust_name, "Γράψτε Όνομα Επώνυμο π.χ. 'Μάριος Δημητριάδης'");
