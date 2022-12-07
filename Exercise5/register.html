@@ -53,6 +53,13 @@
 							</span>
                         </a>
                     </div>
+					<div class="top-right-item">
+                        <a href="register.html">
+							<span class="material-symbols-outlined">
+								account_circle
+							</span>
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -65,7 +72,7 @@
 							<span class="material-icons material-symbols-outlined">
 							smartphone
 							</span>
-                            ΤΗΛΕΦΩΝΙΑ </a>
+                            ΚΙΝΗΤΑ </a>
                     </li>
                     
                     <li>
@@ -73,23 +80,23 @@
 							<span class="material-icons material-symbols-outlined">
 							computer
 							</span>
-                            ΥΠΟΛΟΓΙΣΤΕΣ </a>
+                            LAPTOPS </a>
                     </li>
                     
                     <li>
                         <a class="sidebar-link" href="products-laptops.html">
 							<span class="material-icons material-symbols-outlined">
-							videocam
+							desktop_windows
 							</span>
-                            ΕΙΚΟΝΑ </a>
+                            ΤΗΕΛΟΡΑΣΕΙΣ </a>
                     </li>
                     
                     <li>
                         <a class="sidebar-link" href="products-laptops.html">
 							<span class="material-icons material-symbols-outlined">
-							music_note
+							headphones
 							</span>
-                            ΗΧΟΣ </a>
+                            ΑΚΟΥΣΤΙΚΑ </a>
                     </li>
                 </ul>
             </div>
@@ -101,7 +108,7 @@
                     <!-- TODO make it look nice with css -->                    
                     <section>
                     <h1>Εγγραφή χρήστη</h1>
-                    <h3 id="counter">1 of 7</h6>
+                    <h3 id="counter">1 of 7</h3>
                     </section>
 
                     <div id="main-form">
@@ -164,7 +171,16 @@
                                     placeholder="Νέα Σμύρνη"
                                     required
                                     type="text">
-                            </div>    
+                            </div>  
+
+							<div class="flex-column-container py-1">
+                                <label for="zip-code">ΤΚ: </label>
+                                <input id="zip-code" name="zip-code"
+                                       pattern="^[0-9]{5}$"
+                                       placeholder="12345"
+                                       required
+                                       type="tel">
+                            </div>							
 
                             <div class="flex-column-container py-1">
                                 <label for="customer-birthday">Ημερομηνία Γέννησης: *</label>
@@ -234,7 +250,7 @@
                                     <label for="customer-card-cvv">CVV: </label>
                                     <input autocomplete="cc-csc" id="customer-card-cvv" name="customer-card-cvv"
                                             pattern="[0-9]{3,4}"
-                                            placeholder="123" type="number">
+                                            placeholder="123" type="tel">
                                 </div>
                             </details>
                             
@@ -247,11 +263,29 @@
                             
                             <details class="py-1">
                                 <summary>Διεύθυνση Αποστολής(αν διαφέρει από τη διεύθυνση κατοικίας)</summary>
-                                <label for="customer-shipping-address">Διεύθυνση Αποστολής: </label>
-                                <input id="customer-shipping-address" name="customer-shipping-address"
-                                        pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}, [\u0386-\u03ce ]{3,}, [\u0386-\u03ce ]{3,}, [0-9]{5}$"
-                                        placeholder="Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121"
-                                        type="text">
+                                <div class="flex-column-container py-1">
+                                    <label for="customer-shipping-address">Διεύθυνση Αποστολής: </label>
+                                    <input id="customer-shipping-address" name="customer-shipping-address"
+                                           pattern="^[\u0386-\u03ce ]{2,} [0-9]{1,4}[\u0391-\u03a9]{0,1}"
+                                           placeholder="Κωνσταντινουπόλεως 17"
+                                           type="text">
+                                </div>
+    
+                                <div class="flex-column-container py-1">
+                                    <label for="shipping-city">Πόλη Κατοικίας: </label>
+                                    <input id="shipping-city" name="shipping-city"
+                                           pattern="[\u0386-\u03ce ]{3,}"
+                                           placeholder="Νέα Σμύρνη"
+                                           type="text">
+                                </div>
+    
+                                <div class="flex-column-container py-1">
+                                    <label for="shipping-zip-code">ΤΚ: </label>
+                                    <input id="shipping-zip-code" name="shipping-zip-code"
+                                           pattern="[0-9]{5}"
+                                           placeholder="12345"
+                                           type="tel">
+                                </div>
                             </details>
                         </fieldset>
                         
@@ -313,7 +347,7 @@
                                     <input id="gender-other-input" name="gender-other" type="text">
                                 </div>
                             </div>
-                            <!-- TODO at least one more field with datalist -->
+
                             <b>Χώρα καταγωγής:</b>
                             <div id="country-origin-form" class="flex-column-container justify-content-center align-items-center w-100 py-1">
                                 <label for="country-origin">Επιλέξτε χώρα:</label>

@@ -28,6 +28,11 @@ const product_offer_other = document.querySelector('#product-other-check-pof');
 const product_offer_input = document.querySelector('#product-other-input-pof');
 const cust_pass = document.querySelector('#customer-password');
 const cust_pass_repeat = document.querySelector('#customer-password-repeat');
+const cust_username = document.querySelector('#customer-username');
+const cust_city = document.querySelector('#city');
+const cust_shipping_city = document.querySelector('#shipping-city');
+const cust_zipcode = document.querySelector('#zip-code')
+const cust_shipping_zipcode = document.querySelector('#shipping-zip-code')
 
 const gender = document.getElementById("gender");
 const products_bought_online = document.getElementById("products-bought-online")
@@ -35,21 +40,27 @@ const products_on_offer = document.getElementById("products-on-offer")
 
 const date = new Date()
 
+document.addEventListener("keypress", function(event){
+    if (event.key === 'Enter'){
+        event.preventDefault();
+        go_forward()
+    }
+})
 
 //Show fields only if they are selected
 card.addEventListener('click', () => {
-    cust_card.classList.toggle('hide');
+    cust_card.classList.toggle('display-none');
     updateDetails(cust_card);
 });
 paypal.addEventListener('click', () => {
-    cust_paypal.classList.toggle('hide');
+    cust_paypal.classList.toggle('display-none');
     updateDetails(cust_paypal);
 });
 buy_online_other.addEventListener('click', () => {
-    buy_online_input.classList.toggle('hide');
+    buy_online_input.classList.toggle('display-none');
 });
 product_offer_other.addEventListener('click', () => {
-    product_offer_input.classList.toggle('hide');
+    product_offer_input.classList.toggle('display-none');
 });
 
 //At least one method of communication has to be selected
@@ -67,7 +78,10 @@ cust_birthday.addEventListener('blur', () => {
     let age = Math.abs(age_dt.getUTCFullYear() - 1970);
     if (age < 18) {
         cust_birthday.setCustomValidity('Πρέπει να είστε ενήλικας για να κάνετε εγγραφή.');
-    } 
+    }
+    else if (!cust_birthday.value){
+        cust_birthday.setCustomValidity('Παρακαλώ συμπληρώστε ημερομηνία γέννησης.');
+    }
     else {
         cust_birthday.setCustomValidity('');
     }
@@ -165,11 +179,15 @@ errorMessage(cust_name, "Γράψτε Όνομα Επώνυμο π.χ. 'Μάρι
 errorMessage(cust_email, "π.χ. psilikatzidiko@gmail.com");
 errorMessage(cust_address, "Λάθος διεύθυνση");
 errorMessage(cust_ship_address, "Προσοχή στα κενά πριν και μετά το ',' \nπ.χ. το 'Κωνσταντινουπόλεως 17, Νέα Σμύρνη, Αθήνα, 17121' είναι σωστό, \nενώ το 'Κωνσταντινουπόλεως 17 , Νέα Σμύρνη, Αθήνα  ,17121' είναι λάθος.");
+errorMessage(cust_address, "Λάθος διεύθυνση, η διεύθυνση πρέπει να είναι π.χ. Κωνσταντινουπόλεως 17Α");
+errorMessage(cust_ship_address, "Λάθος διεύθυνση, η διεύθυνση πρέπει να είναι π.χ. Κωνσταντινουπόλεως 17Α");
+errorMessage(cust_city, 'Λάθος πόλη, η πόλη πρέπει να είναι π.χ. Αθήνα');
+errorMessage(cust_shipping_city, 'Λάθος πόλη, η πόλη πρέπει να είναι π.χ. Αθήνα');
+errorMessage(cust_zipcode, 'Λάθος ΤΚ, ο ΤΚ πρέπει να είναι μόνο 5 ψηφία π.χ. 12345');
+errorMessage(cust_shipping_zipcode, 'Λάθος ΤΚ, ο ΤΚ πρέπει να είναι μόνο 5 ψηφία π.χ. 12345');
 errorMessage(cust_ll_phone, "Το σταθερό τηλέφωνο πρέπει να ξεκινάει με 2, μετά ακολουθεί ένα ψηφίο από το 1 έως το 8 και να έχει 10 ψηφία στο σύνολο π.χ. 2101234567");
 errorMessage(cust_cellphone, "Το κινητό τηλέφωνο πρέπει να ξεκινάει με 69 και να έχει 10 ψηφία στο σύνολο π.χ. 6912345678");
 errorMessage(cust_card_name, "Το ονοματεπώνυμο κατόχου πρέπει να γραφτεί με κεφαλαίους λατινικούς χαρακτήρες όπως αναγράφεται στη κάρτα \nπ.χ. 'KOSTAS PAPADOPOULOS' ή 'KOSTAS M. PAPADOPOULOS' ή 'K. PAPADOPOULOS'");
-// errorMessage(cust_card_number, "Ο αριθμός της κάρτας είναι 14-16 ψηφία χωρίς κενά ή παύλες μεταξύ τους \nπ.χ. 1234567890123456");
-// errorMessage(cust_card_cvv, "Ο αριθμός CVV της κάρτας είναι 3-4 ψηφία π.χ. 123 ή 4567");
 
 
 /**
@@ -178,7 +196,7 @@ errorMessage(cust_card_name, "Το ονοματεπώνυμο κατόχου π�
  * @param el element of details to update
  */
 function updateDetails(el) {
-    if (el.classList.contains('hide')) {
+    if (el.classList.contains('display-none')) {
         el.toggleAttribute('open');
         for (let i of el.querySelectorAll('input')) {
             i.toggleAttribute('required');
@@ -222,6 +240,9 @@ function errorMessage(el, emsg) {
     el.addEventListener("invalid", () => {
         el.setCustomValidity(emsg);
     });
+    if (!el.value){
+        el.setCustomValidity('Παρακαλώ συμπληρώστε το πεδίο.');
+    }
 }
 
 /**
