@@ -176,10 +176,6 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.hide {
-    display: none;
-}
-
 .display-none{
     display: none !important;
 }

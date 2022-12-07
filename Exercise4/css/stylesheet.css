@@ -506,10 +506,6 @@ aside {
     user-select: none;
 }
 
-.hide {
-    visibility: hidden;
-}
-
 .display-none{
     display: none;
 }

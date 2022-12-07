@@ -19,7 +19,7 @@ function go_to_previous_subform(){
 
     document.getElementById("error-area").classList = "display-none";
     switch_subforms(selected_subform, previous_subform);
-    update_counter_widget(counter--);
+    update_counter_widget(counter - 1);
 }
 
 function go_to_next_subform(){
@@ -29,7 +29,7 @@ function go_to_next_subform(){
     if (subform_is_valid(selected_subform)){
         document.getElementById("error-area").classList = "display-none";
         switch_subforms(selected_subform, next_subform); 
-        update_counter_widget(counter++);
+        update_counter_widget(counter+ 1);
     }
     else{
         document.getElementById("error-area").classList = "";
@@ -48,13 +48,13 @@ function switch_subforms(selected_subform, other_subform){
     other_subform.classList.remove("display-none");
 
     (other_subform.querySelector(".small-button-container"))
-    ? document.getElementById("button-container").classList.add("d-none")
-    : document.getElementById("button-container").classList.remove("d-none")
+    ? document.getElementById("button-container").classList.add("display-none")
+    : document.getElementById("button-container").classList.remove("display-none")
 }
 
 function update_counter_widget(new_value){
     counter = new_value;
-    document.getElementById("counter").innerHTML = `${counter} of 8`;
+    document.getElementById("counter").innerHTML = `${counter} of 7`;
 }
 
 function subform_is_valid(subform){
