@@ -29,10 +29,9 @@ const product_offer_input = document.querySelector('#product-other-input-pof');
 const cust_pass = document.querySelector('#customer-password');
 const cust_pass_repeat = document.querySelector('#customer-password-repeat');
 
-const man = document.getElementById("man");
-const woman = document.getElementById("woman");
-const other_gender = document.getElementById("gender-other-check");
-const other_gender_input = document.getElementById("gender-other-input");
+const gender = document.getElementById("gender");
+const products_bought_online = document.getElementById("products-bought-online")
+const products_on_offer = document.getElementById("products-on-offer")
 
 const date = new Date()
 
@@ -142,16 +141,23 @@ cust_pass_repeat.addEventListener('input', () => {
 });
 
 
-man.addEventListener("check", function(){
-    other_gender_input.parentElement.classList.add("display-none");
+gender.addEventListener("change", function(){
+    console.log("sq");
+    (document.getElementById("gender-other-check").checked)
+    ? document.getElementById("gender-other-input").parentElement.classList.remove("display-none")
+    : document.getElementById("gender-other-input").parentElement.classList.add("display-none")
 })
 
-woman.addEventListener("click", function(){
-    other_gender_input.parentElement.classList.add("display-none");
+products_bought_online.addEventListener("change", function(){
+    (document.getElementById("product-other-check-bo").checked)
+    ? document.getElementById("product-other-input").parentElement.classList.remove("display-none")
+    : document.getElementById("product-other-input").parentElement.classList.add("display-none")
 })
 
-other_gender.addEventListener("click", function(){
-    other_gender_input.parentElement.classList.remove("display-none");
+products_on_offer.addEventListener("change", function(){
+    (document.getElementById("product-other-check-pof").checked)
+    ? document.getElementById("sale-other-input").parentElement.classList.remove("display-none")
+    : document.getElementById("sale-other-input").parentElement.classList.add("display-none")
 })
 
 //Show custom error messages

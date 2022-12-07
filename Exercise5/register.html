@@ -292,7 +292,7 @@
                             <legend>Σύντομο ερωτηματολόγιο</legend>
 
                             <b>Φύλο:</b>
-                            <div class="flex-container justify-content-start align-items-start w-100 py-1">
+                            <div id="gender" class="flex-container justify-content-start align-items-start w-100 py-1">
                                 <div class="flex-column-container">                         
                                     <label for="man" class="text-center">Άνδρας</label>
                                     <input id="man" name="gender" type="radio" value="man">
@@ -315,7 +315,7 @@
                             </div>
                             <!-- TODO at least one more field with datalist -->
                             <b>Χώρα καταγωγής:</b>
-                            <div class="flex-column-container justify-content-center align-items-center w-100 py-1">
+                            <div id="country-origin-form" class="flex-column-container justify-content-center align-items-center w-100 py-1">
                                 <label for="country-origin">Επιλέξτε χώρα:</label>
                                 <select id="country-origin" list="country-list" name="country-origin">
                                     <option value="Ελλάδα">Ελλάδα</option>
@@ -328,7 +328,7 @@
 
                         <fieldset id="buying-habits" class="display-none">
                             <b>Πόσο συχνά αγοράζετε από ηλεκτρονικά καταστήματα:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                            <div id="freq-of-purchases" class="flex-container justify-content-center align-items-end w-100 py-1">
                                 <div class="flex-column-container">                         
                                     <label for="vey-often-bo" class="text-center">Πολύ συχνά</label>
                                     <input id="vey-often-bo" name="buy-online" type="radio" value="vey-often">
@@ -358,7 +358,7 @@
                             </div>
 
                             <b>Πoιά προϊόντα αγοράζετε από ηλεκτρονικά καταστήματα:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                            <div id="products-bought-online" class="flex-container justify-content-center align-items-end w-100 py-1">
                                 <div class="flex-column-container">       
                                     <label for="phone-bo" class="text-center">Κινητό</label>
                                     <input id="phone-bo" name="products-bought-online" type="checkbox" value="phone">
@@ -383,12 +383,16 @@
                                     <label for="product-other-check-bo" class="text-center">Άλλο</label>
                                     <input id="product-other-check-bo" name="products-bought-online" type="checkbox"
                                             value="product-other-check">
-                                    <input class="display-none" id="product-other-input-bo" name="product-other-input-bo" type="text">
+                                </div>
+
+                                <div class="flex-column-container display-none">
+                                    <label for="product-other-input" class="text-center">Γράψτε εδώ</label>
+                                    <input id="product-other-input" name="products-bought-online" type="text">
                                 </div>
                             </div>
 
                             <b>Πόσο συχνά αγοράζετε προϊόντα σε προσφορά:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                            <div id="buy-on-offer" class="flex-container justify-content-center align-items-end w-100 py-1">
                                 <div class="flex-column-container">     
                                     <label for="vey-often-bio" class="text-center">Πολύ συχνά</label>
                                     <input id="vey-often-bio" name="buy-on-offer" type="radio" value="vey-often">
@@ -417,7 +421,7 @@
                             </div>
 
                             <b>Ποια προϊόντα πιστεύετε ότι θα έπρεπε να έχουν προσφορά πιο συχνά:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">        
+                            <div id="products-on-offer" class="flex-container justify-content-center align-items-end w-100 py-1">        
                                 <div class="flex-column-container"> 
                                     <label for="phone-pof" class="text-center">Κινητό</label>
                                     <input id="phone-pof" name="products-on-offer" type="checkbox" value="phone">
@@ -442,13 +446,17 @@
                                     <label for="product-other-check-pof" class="text-center">Άλλο</label>
                                     <input id="product-other-check-pof" name="products-on-offer" type="checkbox"
                                             value="product-other-check">
-                                    <input class="display-none" id="product-other-input-pof" name="product-other-input-pof" type="text">
+                                </div>
+
+                                <div class="flex-column-container display-none">
+                                    <label for="sale-other-input" class="text-center">Γράψτε εδώ</label>
+                                    <input id="sale-other-input" name="products-on-offer" type="text">
                                 </div>
                                 
                             </div>
 
                             <b>Με ποιό τρόπο πληρώνετε συνήθως:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                            <div id="frequent-pay-method" class="flex-container justify-content-center align-items-end w-100 py-1">
                                 <div class="flex-column-container">    
                                     <label for="card" class="text-center">Κάρτα</label>
                                     <input id="card" name="frequent-pay-method" type="radio" value="card">
@@ -472,7 +480,7 @@
                             </div>
 
                             <b>Πώς θα θέλατε να παραλάβετε την παραγγελία σας:</b>
-                            <div class="flex-container justify-content-center align-items-end w-100 py-1">
+                            <div id="shipping-method" class="flex-container justify-content-center align-items-end w-100 py-1">
                                 <div class="flex-column-container">      
                                     <label for="in-store" class="text-center">Παραλαβή από το κατάστημα</label>
                                     <input id="in-store" name="shipping-method" type="checkbox" value="in-store">
