@@ -282,7 +282,10 @@
                         
                         <div id="extra-data" class="display-none">
                             <p>Ακολουθεί ένα σύντομο ερωτηματολόγιο όπου μπορείτε να συμπληρώσετε αν το επιθυμείτε.</p>
-                            <button type="submit">Skip</button>
+                            <div class="small-button-container">
+                                <button onclick="event.preventDefault();go_forward()">Of course</button> 
+                                <button type="submit">No</button>
+                            </div>     
                         </div>
 
                         <fieldset id="extra-personal-data" class="display-none">
