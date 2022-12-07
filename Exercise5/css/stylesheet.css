@@ -137,8 +137,8 @@ legend {
 label {
     /*Label width and top alignment*/
     display: inline-block;
-    width: 9rem;
     vertical-align: top;
+    text-align: center;
 }
 
 input {
@@ -227,13 +227,38 @@ aside {
     padding-bottom: 2rem;
 }
 
-.flex-container {
+.flex-container, 
+.flex-column-container {
     display: flex;
     flex-wrap: wrap;
 }
 
+.flex-column-container {
+    flex-direction: column;
+}
+
+.justify-content-start {
+    justify-content: start;
+}
+
 .justify-content-center {
     justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.align-items-start{
+    align-items: start;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-end{
+    align-items: end;
 }
 
 .product-list {
@@ -721,4 +746,20 @@ aside {
         grid-area: 2/1/3/2;
 
     }
+}
+
+.w-0{
+    width: 0;
+}
+
+.w-25{
+    width: 25%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-100{
+    width: 100%;
 }

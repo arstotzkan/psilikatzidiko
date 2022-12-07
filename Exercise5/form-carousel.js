@@ -1,6 +1,11 @@
 let counter = 1
 
 function go_back(){
+    if (counter > 1)
+        go_to_previous_subform()
+}
+
+function go_to_previous_subform(){
     let selected_subform = document.querySelector(".displayed");
     let previous_subform =  selected_subform.previousElementSibling;
 
@@ -24,6 +29,12 @@ function go_back(){
 }
 
 function go_forward(){
+    (counter < document.getElementById("main-form").childElementCount)
+    ? go_to_next_subform()
+    : document.querySelector("form").submit();
+}
+
+function go_to_next_subform(){
     let selected_subform = document.querySelector(".displayed");
     let next_subform =  selected_subform.nextElementSibling;
 
@@ -42,10 +53,6 @@ function go_forward(){
     else{
         document.getElementById("error-area").classList = "";
         show_errors(selected_subform);
-    }
-
-    if (counter === 9){
-        document.querySelector("form").submit();
     }
 }
 
