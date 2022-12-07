@@ -9,23 +9,17 @@ function go_to_previous_subform(){
     let selected_subform = document.querySelector(".displayed");
     let previous_subform =  selected_subform.previousElementSibling;
 
-    if (subform_is_valid(selected_subform)){
+    document.getElementById("error-area").classList = "display-none";
 
-        document.getElementById("error-area").classList = "display-none";
+    selected_subform.classList.add("display-none");
+    selected_subform.classList.remove("displayed");
 
-        selected_subform.classList.add("display-none");
-        selected_subform.classList.remove("displayed");
+    previous_subform.classList.add("displayed");
+    previous_subform.classList.remove("display-none");
 
-        previous_subform.classList.add("displayed");
-        previous_subform.classList.remove("display-none");
-
-        counter--;
-        document.getElementById("counter").innerHTML = `${counter} of 8`;
-    }
-    else{
-        document.getElementById("error-area").classList = "";
-        show_errors(selected_subform);
-    }
+    counter--;
+    document.getElementById("counter").innerHTML = `${counter} of 8`;
+    
 }
 
 function go_forward(){

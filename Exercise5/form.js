@@ -1,3 +1,10 @@
+document.addEventListener("keypress", function(event){
+    if (event.key === 'Enter'){
+        event.preventDefault();
+        go_forward()
+    }
+})
+
 const card = document.querySelector('#debit-credit-card');
 const paypal = document.querySelector('#paypal');
 const cust_card = document.querySelector('#customer-card');
