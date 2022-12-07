@@ -175,6 +175,7 @@ products_on_offer.addEventListener("change", function(){
 })
 
 //Show custom error messages
+errorMessage(cust_username, 'Το όνομα χρήστη πρέπει να γραφτεί με κεφαλαίους ή πεζούς λατινικούς χαρακτήρες και να είναι τουλάχιστον 7 χαρακτήρες')
 errorMessage(cust_name, "Γράψτε Όνομα Επώνυμο π.χ. 'Μάριος Δημητριάδης'");
 errorMessage(cust_email, "π.χ. psilikatzidiko@gmail.com");
 errorMessage(cust_address, "Λάθος διεύθυνση");
