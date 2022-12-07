@@ -184,8 +184,8 @@
 
                             <div class="flex-column-container py-1">
                                 <label for="customer-birthday">Ημερομηνία Γέννησης: *</label>
-                                <input autocomplete="bday" id="customer-birthday" min="1922-01-01" name="customer-birthday"
-                                    placeholder="10/05/1995" required type="date">
+                                <input id="customer-birthday" min="1922-01-01" name="customer-birthday"
+                                    required type="date">
                             </div> 
 
                             <div class="flex-column-container py-1">
@@ -227,10 +227,10 @@
                             </div>
 
                             <details class="display-none" id="customer-card">
-                                <div class="flex-container w-100 py-1">                         
-                                    <summary>Χρεωστική/Πιστωτική Κάρτα</summary>
+                                <summary>Χρεωστική/Πιστωτική Κάρτα</summary>
+                                <div class="flex-container w-100 py-1">
                                     <label for="customer-card-number">Αριθμός Κάρτας: </label>
-                                    <input autocomplete="cc-number" id="customer-card-number" name="customer-card-number"
+                                    <input id="customer-card-number" name="customer-card-number"
                                             pattern="[0-9]{14,16}" placeholder="1234567890123456" type="tel">
                                 </div>
 
@@ -248,7 +248,7 @@
                         
                                 <div class="flex-container w-100 py-1">       
                                     <label for="customer-card-cvv">CVV: </label>
-                                    <input autocomplete="cc-csc" id="customer-card-cvv" name="customer-card-cvv"
+                                    <input id="customer-card-cvv" name="customer-card-cvv"
                                             pattern="[0-9]{3,4}"
                                             placeholder="123" type="tel">
                                 </div>
