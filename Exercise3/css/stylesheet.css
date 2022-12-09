@@ -439,6 +439,12 @@ aside {
     padding-left: 0.8rem;
 }
 
+.tech-support-img {
+    width: 20%;
+    margin-top: 5rem;
+    height:fit-content;
+}
+
 .shadow {
     box-shadow: 5px 5px 10px #340055;
 }
