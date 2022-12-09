@@ -469,6 +469,12 @@ strong {
     margin-bottom: 2rem;
 }
 
+#main-container, #main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #opening-hours {
     /*Position and space around for opening hours*/
     float: right;
