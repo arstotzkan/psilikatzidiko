@@ -639,7 +639,7 @@ aside {
 
 .category-list {
     /*Size of list, floating and live space from bottom*/
-    height: 5rem;
+    height: max(auto, 5rem);
     margin-bottom: 1rem;
 }
 
@@ -742,6 +742,23 @@ aside {
 }
 
 .w-100{
+    width: 100%;
+}
+
+
+.h-0{
+    width: 0;
+}
+
+.h-25{
+    width: 25%;
+}
+
+.h-50{
+    width: 50%;
+}
+
+.h-100{
     width: 100%;
 }
 
